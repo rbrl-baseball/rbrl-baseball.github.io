@@ -136,6 +136,17 @@
   shape-outside: margin-box;
 }
 
+/* Auto-float the first image in news articles */
+.nested-copy-line-height > p:first-child > img,
+.nested-copy-line-height > p > img.article-image,
+.article-image {
+  float: left;
+  max-width: 250px;
+  margin: 0 1.5rem 1rem 0;
+  border-radius: 6px;
+  shape-outside: margin-box;
+}
+
 /* Ensure container clears floated images */
 article, .nested-copy-line-height, .lh-copy {
   overflow: hidden;
