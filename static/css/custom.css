@@ -211,6 +211,14 @@ main.pb7 {
   background-color: var(--rbrl-blue) !important;
 }
 
+/* Make header heading text heavier for readability */
+.bg-dark-blue .fw2 {
+  font-weight: 400 !important;
+}
+.bg-dark-blue .fw1 {
+  font-weight: 400 !important;
+}
+
 .dark-blue {
   color: var(--rbrl-blue) !important;
 }
