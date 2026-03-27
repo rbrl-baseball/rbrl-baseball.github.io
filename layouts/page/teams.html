@@ -1,0 +1,39 @@
+{{ define "header" }}{{ partials.Include "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="ph3 ph5-l center mw8 pt2 pb4">
+    <h1 class="f1">{{ .Title }}</h1>
+    <div class="f4 lh-copy mid-gray mb4">
+      {{ .Content }}
+    </div>
+
+    {{ with hugo.Data.teams }}
+
+    {{/* American League */}}
+    <h2 class="f3 fw6 dark-blue mb3 bb b--dark-blue pb2">🇺🇸 American League</h2>
+    <div class="team-grid mb5">
+      {{ range .american_league }}
+      <div class="team-card bg-white br3 shadow-4 pa3 tc">
+        <div class="team-logo-wrapper mb2">
+          <img src="{{ .logo }}" alt="{{ .name }}" class="team-logo">
+        </div>
+        <h3 class="f5 fw6 dark-gray mb0">{{ .name }}</h3>
+      </div>
+      {{ end }}
+    </div>
+
+    {{/* National League */}}
+    <h2 class="f3 fw6 dark-red mb3 bb b--dark-red pb2">🏟️ National League</h2>
+    <div class="team-grid mb4">
+      {{ range .national_league }}
+      <div class="team-card bg-white br3 shadow-4 pa3 tc">
+        <div class="team-logo-wrapper mb2">
+          <img src="{{ .logo }}" alt="{{ .name }}" class="team-logo">
+        </div>
+        <h3 class="f5 fw6 dark-gray mb0">{{ .name }}</h3>
+      </div>
+      {{ end }}
+    </div>
+
+    {{ end }}
+  </div>
+{{ end }}

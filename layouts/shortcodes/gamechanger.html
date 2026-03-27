@@ -1,0 +1,18 @@
+{{/* GameChanger scoreboard widget shortcode */}}
+{{/* Usage: {{< gamechanger >}} or {{< gamechanger widget_id="your-widget-id" >}} */}}
+{{/* The widget_id changes each season — update it in hugo.toml under [params.gamechanger] or pass directly */}}
+{{ $widget_id := .Get "widget_id" | default (site.Params.gamechanger.widget_id | default "65041549-7a93-400a-a9ee-d67d9a3f8c9e") }}
+{{ $max_games := .Get "max_games" | default (site.Params.gamechanger.max_games | default "4") }}
+{{ $element_id := printf "gc-scoreboard-widget-%s" (substr $widget_id 0 8) }}
+
+<div class="gamechanger-widget mv4">
+  <div id="{{ $element_id }}"></div>
+  <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+  <script>
+    window.GC.scoreboard.init({
+      target: "#{{ $element_id }}",
+      widgetId: "{{ $widget_id }}",
+      maxVerticalGamesVisible: {{ $max_games }},
+    })
+  </script>
+</div>

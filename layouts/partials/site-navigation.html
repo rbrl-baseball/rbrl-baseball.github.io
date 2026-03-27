@@ -1,0 +1,51 @@
+<nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex items-center justify-between">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
+      {{ with .Site.Params.site_logo }}
+        <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+
+    {{/* Hamburger button — visible only on mobile */}}
+    <button class="hamburger dn-l bg-transparent bn white pointer pa2" id="hamburger-btn" aria-label="Menu" aria-expanded="false">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <rect y="3" width="24" height="2.5" rx="1"/>
+        <rect y="10.5" width="24" height="2.5" rx="1"/>
+        <rect y="18" width="24" height="2.5" rx="1"/>
+      </svg>
+    </button>
+
+    {{/* Desktop nav — hidden on mobile */}}
+    <div class="flex-l items-center dn db-l">
+      {{ partials.Include "i18nlist.html" . }}
+      {{ if .Site.Menus.main }}
+        <ul class="pl0 mr3">
+          {{ range .Site.Menus.main }}
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+  </div>
+
+  {{/* Mobile menu — hidden by default */}}
+  {{ if .Site.Menus.main }}
+  <div id="mobile-menu" class="mobile-menu">
+    <ul class="list pl0 mt3 mb0">
+      {{ range .Site.Menus.main }}
+      <li class="pv2 bb b--white-20">
+        <a class="hover-white white-90 no-underline f5" href="{{ .URL }}">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+</nav>

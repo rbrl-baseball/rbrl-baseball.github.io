@@ -1,0 +1,35 @@
+# Sponsors data file
+# To add a new sponsor: copy an entry below, update the fields, and add their logo to static/images/sponsors/
+# Logo images should be roughly 200x100px, PNG or SVG preferred.
+
+- name: "Anthony's Roast Beef"
+  url: "http://www.anthonysroastbeef.com/"
+  logo: "/images/sponsors/placeholder-sponsor.svg"
+
+- name: "Cupcake City"
+  url: "http://www.cupcakecityreading.com/"
+  logo: "/images/sponsors/placeholder-sponsor.svg"
+
+- name: "Colombo's Pizza Cafe"
+  url: "http://www.colombospizzacafe.com"
+  logo: "/images/sponsors/placeholder-sponsor.svg"
+
+- name: "Nella's Pizza"
+  url: "https://nellaspizza.com/"
+  logo: "/images/sponsors/nellas.jpg"
+
+- name: "Cal's Creamery"
+  url: "https://calscreamery.com/"
+  logo: "/images/sponsors/cals-creamery.jpg"
+
+- name: "Avery Auto Care"
+  url: "http://averyautocare.com"
+  logo: "/images/sponsors/avery-auto.png"
+
+- name: "Tango Home Services"
+  url: "http://tangohomeservices.com"
+  logo: "/images/sponsors/tango-home.jpg"
+
+- name: "Project Pinball"
+  url: "https://projectpinball.org/"
+  logo: "/images/sponsors/project-pinball.jpg"

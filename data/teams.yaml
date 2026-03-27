@@ -1,0 +1,25 @@
+# Teams data file organized by division
+
+american_league:
+  - name: "Angels"
+    logo: "/images/teams/angels.svg"
+  - name: "Astros"
+    logo: "/images/teams/astros.svg"
+  - name: "Athletics"
+    logo: "/images/teams/athletics.svg"
+  - name: "Mariners"
+    logo: "/images/teams/mariners.svg"
+  - name: "Royals"
+    logo: "/images/teams/royals.svg"
+
+national_league:
+  - name: "Cubs"
+    logo: "/images/teams/cubs.svg"
+  - name: "Marlins"
+    logo: "/images/teams/marlins.svg"
+  - name: "Padres"
+    logo: "/images/teams/padres.svg"
+  - name: "Phillies"
+    logo: "/images/teams/phillies.svg"
+  - name: "Pirates"
+    logo: "/images/teams/pirates.svg"

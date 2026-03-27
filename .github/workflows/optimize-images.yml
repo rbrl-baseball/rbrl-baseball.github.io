@@ -1,0 +1,67 @@
+name: Optimize News Images
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "static/images/news/**"
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for unoptimized images
+        id: check
+        run: |
+          # Skip if the last commit was from this workflow
+          LAST_MSG=$(git log -1 --pretty=%s)
+          if [[ "$LAST_MSG" == *"[skip ci]"* ]]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Skipping — last commit was from image optimization"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.skip == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        if: steps.check.outputs.skip == 'false'
+        run: pip install Pillow
+
+      - name: Optimize images
+        if: steps.check.outputs.skip == 'false'
+        id: optimize
+        run: |
+          OPTIMIZED=0
+          for img in static/images/news/*.{jpg,jpeg,png}; do
+            [ -f "$img" ] || continue
+
+            # Skip SVGs and already-small files (under 100KB)
+            SIZE=$(stat --format=%s "$img")
+            if [ "$SIZE" -lt 102400 ]; then
+              echo "Skipping $img (already ${SIZE} bytes)"
+              continue
+            fi
+
+            echo "Optimizing $img..."
+            python3 scripts/optimize-image.py "$img"
+            OPTIMIZED=$((OPTIMIZED + 1))
+          done
+
+          echo "count=$OPTIMIZED" >> "$GITHUB_OUTPUT"
+
+      - name: Commit optimized images
+        if: steps.check.outputs.skip == 'false' && steps.optimize.outputs.count != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/images/news/
+          git commit -m "Optimize news images [skip ci]"
+          git push

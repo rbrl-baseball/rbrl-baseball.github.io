@@ -1,0 +1,57 @@
+baseURL = 'https://readingbaberuth.com/'
+languageCode = 'en-us'
+title = 'Reading Babe Ruth'
+theme = 'ananke'
+copyright = 'Reading Babe Ruth'
+
+[params]
+  text_color = "dark-gray"
+  background_color_class = "bg-dark-blue"
+  favicon = "/images/rbrl-logo.png"
+  site_logo = "/images/rbrl-logo.png"
+  description = "Reading Babe Ruth — Youth baseball for ages 13–15 in Reading, Massachusetts"
+  mainSections = ["news"]
+  recent_posts_number = 1
+
+  [params.gamechanger]
+    widget_id = "65041549-7a93-400a-a9ee-d67d9a3f8c9e"
+    max_games = 4
+    league_url = "https://web.gc.com/organizations/fCGlFdY1Z4hj/schedule"
+
+  [params.ananke]
+    show_recent_posts = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "Schedule"
+    url = "/schedule/"
+    weight = 3
+  [[menu.main]]
+    name = "Teams"
+    url = "/teams/"
+    weight = 4
+  [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 5
+  [[menu.main]]
+    name = "Sponsors"
+    url = "/sponsors/"
+    weight = 6
+  [[menu.main]]
+    name = "History"
+    url = "/history/"
+    weight = 7
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

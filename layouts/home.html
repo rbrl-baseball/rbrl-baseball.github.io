@@ -1,0 +1,46 @@
+{{ define "main" }}
+  {{/* Latest News */}}
+  {{ $news := where .Site.RegularPages "Section" "news" }}
+  {{ if $news }}
+  <section class="w-100 bg-near-white pv3">
+    <div class="ph3 ph5-l center mw8">
+      <h2 class="f3 fw6 dark-blue mb3">📰 Latest News</h2>
+      {{ with first 1 $news }}
+        {{ range . }}
+        <article class="bg-white pa4 br3 shadow-4 mb4">
+          <h3 class="f4 fw6 mb2">
+            <a href="{{ .RelPermalink }}" class="link dark-blue dim">{{ .Title }}</a>
+          </h3>
+          <p class="f6 gray mb3">{{ .Date.Format "January 2, 2006" }} {{ with .Params.author }}· {{ . }}{{ end }}</p>
+          <div class="lh-copy mid-gray">
+            {{ .Summary }}
+          </div>
+          <a href="{{ .RelPermalink }}" class="f6 link dim dark-blue mt2 dib w-100 tr">Read more →</a>
+        </article>
+        {{ end }}
+      {{ end }}
+      <a href="/news/" class="f5 link dim dark-blue">View all news →</a>
+    </div>
+  </section>
+  {{ end }}
+
+  {{/* GameChanger Scoreboard */}}
+  <section class="w-100 bg-near-white pv4">
+    <div class="ph3 ph5-l center mw8">
+      <h2 class="f3 fw6 dark-blue mb3">⚾ Scores & Schedule</h2>
+      <div id="gc-scoreboard-widget-homepage"></div>
+      <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+      <script>
+        window.GC.scoreboard.init({
+          target: "#gc-scoreboard-widget-homepage",
+          widgetId: "{{ site.Params.gamechanger.widget_id | default "65041549-7a93-400a-a9ee-d67d9a3f8c9e" }}",
+          maxVerticalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
+        })
+      </script>
+    </div>
+  </section>
+
+  {{/* Sponsor Logo Footer */}}
+  {{ partial "sponsor-ticker.html" . }}
+
+{{ end }}

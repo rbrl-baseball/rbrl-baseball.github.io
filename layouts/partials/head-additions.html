@@ -1,0 +1,17 @@
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/custom.css">
+
+<!-- Hamburger menu -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var btn = document.getElementById('hamburger-btn');
+  var menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', function() {
+      menu.classList.toggle('open');
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+    });
+  }
+});
+</script>

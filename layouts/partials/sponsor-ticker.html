@@ -1,0 +1,31 @@
+{{/* Sponsor logo ticker — horizontally scrolling sponsor logos */}}
+{{ with hugo.Data.sponsors }}
+<section class="sponsor-ticker w-100 bg-white pv3 bt b--light-gray">
+  <div class="ph3 ph5-l center">
+    <p class="f6 gray tc mb3">Proudly sponsored by</p>
+    <div class="sponsor-ticker-track">
+      <div class="sponsor-ticker-inner">
+        {{ range . }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="sponsor-ticker-item" title="{{ .name }}">
+          {{ if (strings.HasSuffix .logo "placeholder-sponsor.svg") }}
+            <span class="sponsor-placeholder f6 gray">{{ .name }}</span>
+          {{ else }}
+            <img src="{{ .logo }}" alt="{{ .name }}" loading="lazy">
+          {{ end }}
+        </a>
+        {{ end }}
+        {{/* Duplicate for seamless loop */}}
+        {{ range . }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="sponsor-ticker-item" aria-hidden="true" tabindex="-1" title="{{ .name }}">
+          {{ if (strings.HasSuffix .logo "placeholder-sponsor.svg") }}
+            <span class="sponsor-placeholder f6 gray">{{ .name }}</span>
+          {{ else }}
+            <img src="{{ .logo }}" alt="{{ .name }}" loading="lazy">
+          {{ end }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

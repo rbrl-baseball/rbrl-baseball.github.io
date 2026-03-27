@@ -1,0 +1,23 @@
+{{ define "header" }}{{ partials.Include "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="ph3 ph5-l center mw8 pt2 pb4">
+    <h1 class="f1">{{ .Title }}</h1>
+    <div class="nested-links mid-gray">
+      {{ .Content }}
+    </div>
+
+    {{ $pages := .Pages.ByDate.Reverse }}
+    {{ range $pages }}
+    <article class="bb b--light-gray pb4 mb4">
+      <h2 class="f4 fw6 mb1">
+        <a href="{{ .RelPermalink }}" class="link dark-blue dim">{{ .Title }}</a>
+      </h2>
+      <p class="f6 gray mb2">{{ .Date.Format "January 2, 2006" }} {{ with .Params.author }}· {{ . }}{{ end }}</p>
+      <div class="lh-copy mid-gray">
+        {{ .Summary }}
+      </div>
+      <a href="{{ .RelPermalink }}" class="f6 link dim dark-blue mt2 dib w-100 tr">Read more →</a>
+    </article>
+    {{ end }}
+  </div>
+{{ end }}
