@@ -1,0 +1,87 @@
+{
+  "american_league": [
+    {
+      "name": "Angels",
+      "division": "american_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Astros",
+      "division": "american_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Athletics",
+      "division": "american_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Mariners",
+      "division": "american_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Royals",
+      "division": "american_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    }
+  ],
+  "national_league": [
+    {
+      "name": "Cubs",
+      "division": "national_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Marlins",
+      "division": "national_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Padres",
+      "division": "national_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Phillies",
+      "division": "national_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    },
+    {
+      "name": "Pirates",
+      "division": "national_league",
+      "w": 0,
+      "l": 0,
+      "t": 0,
+      "points": 0
+    }
+  ],
+  "games": []
+}

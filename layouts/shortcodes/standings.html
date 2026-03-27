@@ -1,0 +1,77 @@
+{{/* Standings shortcode — renders AL and NL standings tables from data/standings.json */}}
+{{ $standings := hugo.Data.standings }}
+
+{{ if $standings }}
+<div class="standings-container mv4">
+  <div class="flex flex-column flex-row-l">
+
+    {{/* American League */}}
+    <div class="w-100 w-50-l pr2-l mb4 mb0-l">
+      <div class="standings-card br3 overflow-hidden shadow-4">
+        <div class="standings-header bg-dark-blue white pa3">
+          <h3 class="f5 fw6 ma0">🇺🇸 American League</h3>
+        </div>
+        <table class="standings-table w-100 collapse">
+          <thead>
+            <tr class="bg-near-white">
+              <th class="pa2 tl f7 ttu tracked">#</th>
+              <th class="pa2 tl f7 ttu tracked">Team</th>
+              <th class="pa2 tc f7 ttu tracked">W</th>
+              <th class="pa2 tc f7 ttu tracked">L</th>
+              <th class="pa2 tc f7 ttu tracked">T</th>
+              <th class="pa2 tc f7 ttu tracked fw7">PTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range $i, $team := $standings.american_league }}
+            <tr class="standings-row{{ if eq $i 0 }} standings-leader{{ end }}">
+              <td class="pa2 tc mid-gray f6">{{ add $i 1 }}</td>
+              <td class="pa2 fw6 f6">{{ $team.name }}</td>
+              <td class="pa2 tc f6">{{ $team.w }}</td>
+              <td class="pa2 tc f6">{{ $team.l }}</td>
+              <td class="pa2 tc f6">{{ $team.t }}</td>
+              <td class="pa2 tc f6 fw7 dark-blue">{{ $team.points }}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    {{/* National League */}}
+    <div class="w-100 w-50-l pl2-l">
+      <div class="standings-card br3 overflow-hidden shadow-4">
+        <div class="standings-header bg-dark-red white pa3">
+          <h3 class="f5 fw6 ma0">🏟️ National League</h3>
+        </div>
+        <table class="standings-table w-100 collapse">
+          <thead>
+            <tr class="bg-near-white">
+              <th class="pa2 tl f7 ttu tracked">#</th>
+              <th class="pa2 tl f7 ttu tracked">Team</th>
+              <th class="pa2 tc f7 ttu tracked">W</th>
+              <th class="pa2 tc f7 ttu tracked">L</th>
+              <th class="pa2 tc f7 ttu tracked">T</th>
+              <th class="pa2 tc f7 ttu tracked fw7">PTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range $i, $team := $standings.national_league }}
+            <tr class="standings-row{{ if eq $i 0 }} standings-leader{{ end }}">
+              <td class="pa2 tc mid-gray f6">{{ add $i 1 }}</td>
+              <td class="pa2 fw6 f6">{{ $team.name }}</td>
+              <td class="pa2 tc f6">{{ $team.w }}</td>
+              <td class="pa2 tc f6">{{ $team.l }}</td>
+              <td class="pa2 tc f6">{{ $team.t }}</td>
+              <td class="pa2 tc f6 fw7" style="color: var(--rbrl-red);">{{ $team.points }}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <p class="f7 mid-gray mt3 tc i">2 points for a win · 1 point for a tie · Updated daily from GameChanger</p>
+</div>
+{{ end }}

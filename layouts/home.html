@@ -37,6 +37,15 @@
           maxVerticalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
         })
       </script>
+      <a href="/schedule/" class="f5 link dim dark-blue mt3 dib">View full schedule →</a>
+    </div>
+  </section>
+
+  {{/* Standings */}}
+  <section class="w-100 pv4">
+    <div class="ph3 ph5-l center mw8">
+      <h2 class="f3 fw6 dark-blue mb3">🏆 Standings</h2>
+      {{ partial "standings.html" . }}
     </div>
   </section>
 
