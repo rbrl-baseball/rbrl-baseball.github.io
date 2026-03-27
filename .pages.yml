@@ -1,0 +1,101 @@
+media:
+  - name: news-images
+    label: News Images
+    input: static/images/news
+    output: /images/news
+    categories: [image]
+  - name: sponsor-logos
+    label: Sponsor Logos
+    input: static/images/sponsors
+    output: /images/sponsors
+    categories: [image]
+
+content:
+  - name: news
+    label: News
+    type: collection
+    path: content/news
+    format: yaml-frontmatter
+    exclude: ["_index.md"]
+    filename:
+      template: "{title}.md"
+      field: create
+    view:
+      primary: title
+      sort: date
+      order: desc
+      fields: [title, date, author]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: description
+        label: Summary
+        type: string
+        description: Short description for previews and SEO
+      - name: author
+        label: Author
+        type: string
+      - name: body
+        label: Content
+        type: rich-text
+
+  - name: pages
+    label: Pages
+    type: group
+    items:
+      - name: about
+        label: About
+        type: file
+        path: content/about/index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+
+      - name: schedule
+        label: Schedule
+        type: file
+        path: content/schedule/index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+
+      - name: history
+        label: History
+        type: file
+        path: content/history/index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
