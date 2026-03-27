@@ -11,6 +11,7 @@
 
 .team-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
 }
 
 .team-card:hover {
@@ -27,6 +28,12 @@
 .team-logo-wrapper img {
   width: 80px;
   height: 80px;
+  object-fit: contain;
+}
+
+.team-page-logo {
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
