@@ -78,6 +78,6 @@ The World Series MVP award has been given to the outstanding player of the World
 | 2022 | Declan Wilkes | Mariners |
 | 2021 | James Marcotte | Padres |
 | 2020 | Jack Raimo | Phillies |
-| 2019 | Joey Dipietro | Marlins |
+| 2019 | Michael DiPietro | Marlins |
 | 2018 | Dom Pucci | Angels |
 | 2017 | Steve Needham | White Sox |
