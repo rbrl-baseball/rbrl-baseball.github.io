@@ -9,6 +9,4 @@ author: "Jeff Pierce"
 
 Welcome to the 2026 Spring Season.  Player assignment will be communicated in Mid March.  Opening Day for the regular season is April 25th
 
-Registration Link:
-
-[https://active.leagueone.com/olr/Pages/Welcome.aspx?ClubId=15905](https://active.leagueone.com/olr/Pages/Welcome.aspx?ClubId=15905)
+[Register today](https://active.leagueone.com/olr/Pages/Welcome.aspx?ClubId=15905)!
