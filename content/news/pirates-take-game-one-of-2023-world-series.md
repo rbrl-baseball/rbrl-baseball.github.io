@@ -1,6 +1,6 @@
 ---
 title: "Pirates take Game One of 2023 World Series"
-date: 2023-06-20
+date: 2023-06-19
 description: "Pirates take Game One of 2023 World Series"
 author: "Jeff Pierce"
 ---
