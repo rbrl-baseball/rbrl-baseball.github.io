@@ -8,7 +8,7 @@
 
     {{ $pages := .Pages.ByDate.Reverse }}
     {{ range $pages }}
-    <article class="bb b--light-gray pb4 mb4">
+    <article class="bg-white br3 shadow-4 pa4 mb4">
       <h2 class="f4 fw6 mb1">
         <a href="{{ .RelPermalink }}" class="link dark-blue dim">{{ .Title }}</a>
       </h2>
