@@ -3,7 +3,7 @@ title: RBRL Launches New Website
 date: 2026-03-27
 description: Welcome to the new home for Reading Babe Ruth baseball!
 ---
-![](/images/news/2024-spring-registration-is-closed.jpg)
+{{< article-image src="/images/news/2024-spring-registration-is-closed.jpg" alt="Rbrl Launches New Website" >}}
 
 Reading Babe Ruth League is excited to present the launch of our brand new website! After years of faithful service from our previous site, we felt it was time to give RBRL an online home that matches the quality of our league.  
 

@@ -136,9 +136,7 @@
   shape-outside: margin-box;
 }
 
-/* Auto-float the first image in news articles */
-.nested-copy-line-height > p:first-child > img,
-.nested-copy-line-height > p > img.article-image,
+/* Auto-float article images (applied via shortcode) */
 .article-image {
   float: left;
   max-width: 250px;

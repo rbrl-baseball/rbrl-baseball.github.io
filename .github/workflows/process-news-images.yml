@@ -1,0 +1,50 @@
+name: Process News Images
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "content/news/**"
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Check for unprocessed posts
+        id: check
+        run: |
+          LAST_MSG=$(git log -1 --pretty=%s)
+          if [[ "$LAST_MSG" == *"[skip ci]"* ]]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.skip == 'false'
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Process news images
+        if: steps.check.outputs.skip == 'false'
+        id: process
+        run: |
+          python scripts/process-news-images.py | tee /tmp/output.txt
+          if grep -q "post(s) updated" /tmp/output.txt; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit changes
+        if: steps.check.outputs.skip == 'false' && steps.process.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/news/
+          git commit -m "Process news images into article-image shortcodes [skip ci]"
+          git push
