@@ -1,28 +1,35 @@
 ---
-title: "2009 Reading Red win Suburban PONY title"
-date: 2019-05-04
-description: "2009 Reading Red win Suburban PONY title"
-author: "Jeff Pierce"
+title: "Reading Red wins Robbins Suburban PONY League Senior Title"
+date: 2009-08-02
+description: "Reading Red completes improbable playoff run to win Robbins Suburban PONY League Senior championship"
 ---
 
-Front : Coach Brown
+The #6 seeded Reading Red PONY team completed an improbable storybook run in the Suburban League playoffs by defeating Lowell on Sunday afternoon, 9-7. This was their 3rd straight series that went to a game 3 and each time Reading won the finale on the opponent's home field.
 
+The Reading Red team consisted primarily of HS Freshman and was one of 2 teams that Reading entered into the PONY League from this group of Freshman. Reading is the only town other than Andover that splits their talent into 2 equal teams. Reading's split squad teams compete against the top 10 to 12 players in big baseball towns like Lowell, Billerica, Chelmsford, Dracut and North Andover. The Reading Black team also had an outstanding year finishing as a #4 playoff seed and was 1 out away from making the semi finals where they would have faced Reading Red.
 
+### Round 1: Andover Gold
 
+Reading was matched against 3 time defending champ Andover Gold in Round 1. Game 1 went to Reading with lefty ace Scott Tully striking out 12 in a 7-2 win. Reading's offense was led by Cam McCarthy with a 2 run double, Tully 2 RBIs and Nick Scali 2 steals and 2 runs scored. After Andover won a 12-8 slugfest at Washington Park, Reading had to go back to Andover for the finale. In this game Drew Zaccardi and Tully held Andover to 5 hits. Reading was led offensively by Ian West with 2 RBIs, Greg Altobello 3 hits and Owen Marchetti 2 hits including a double. A significant win in ending Andover's 3 year reign in the PONY Senior division on the Andover HS varsity diamond.
 
- 
+### Round 2: Billerica
 
+Reading was matched against Billerica in the semi-finals. Billerica who had just come off a thrilling 3 game series win versus Reading Black was a very impressive team, well coached and a pitching staff that went 5 deep. Adding to the drama, one of Billerica's leading players and a varsity HS baseball player, as a Freshman, suffered a devastating on-field injury in game 2 of the Reading Black series (a career threatening broken leg in 2 places that ended up requiring some difficult surgery). The Billerica team had fed off the emotion of their star's injury for a big comeback against Reading scoring 4 runs in the 7th after the injury and then a big Game 3 victory at Washington Park.
 
+In game 1, Drew Zaccardi spun a beauty limiting the strong Billerica hitting team to 2 runs in a 5-2 Reading win at Shawsheen Tech. Reading's production came from Andrew Ferraro's 2 hits and 2 RBIs, an RBI triple from Parker Traugot and an RBI double from Kyle Webb. In Game 2 Billerica got the bats going early and winning at Washington Park 7-4. Game 3 at Shawsheen Tech was played over 2 days and was an instant classic. In front of a large vociferous but classy Billerica crowd Reading started Tully their ace and undefeated pitcher (7-0 with 1 save season to date). Reading jumped out to a 2-0 lead with Tully knocking in both runs, and it appeared that would be enough as Tully was mowing down a strong hitting Billerica team recording 12 K's along the way. Then in the bottom of the 6th after a great duel between Tully and Billerica's #4 hitter resulted in another strikeout, the tide turned. Billerica pieced together a solid single and a walk with one out and then a potential double play ball resulted in a throwing error, followed by another throwing error during a rundown after the Billerica runner was caught off 2nd base. Score was now 2-2 and the lead run at 3rd base. On the first pitch from Tully the Billerica batsman executed a perfect suicide squeeze bunt, now it was 3-2 Billerica and 3 outs left in Reading's season. After the first 2 batters went down, Billerica was one out away from a well-earned series win. Then Altobello hit a routine one hopper to 3rd base but Greg used his speed to put some pressure on the throw, and beat out the hit when the first baseman moved his foot off the base to take throw. He then stole second base and scored when Chris Brown flared a hit to left center to tie the game at 3-3. After eventually loading the bases Reading failed to score the go ahead run. In the bottom of the 7th, after a lead off walk, Tully made short work of the next 3 hitters to put the game into extra innings. Billerica must have breathed a big sigh of relief when the umpires called the game for darkness and therefore effectively ending Tully's outing for the night and for the continuation the next evening. The next evening if you were late arriving you missed out as Reading scored in the top of the 8th with 2 out for the winning run. A two out walk and a steal for Marchetti and a Jason Tavoletti RBI double brought home the winning run. Webb plowed through Billerica's 3-4-5 hitters to save the victory and the series win for Reading.
 
+### Championship Round: Lowell
+
+Off to Lowell the next night for the Finals and Reading Red's excellent summer adventure in the Merrimack Valley continued. Lowell was riding a 10 game winning streak and is a perennial league powerhouse and had won both their series in 2 games. Game 1 went Lowell's way despite a good effort from Zaccardi on the mound and a Mike Remondi run scoring triple amongst the offensive highlights. With the score 6-6 with 2 out in the bottom of the 6th, the umpire called a questionable balk on the Reading pitcher to bring home the eventual winning run in a 7-6 loss. Now faced with an elimination game and the pitching staff stretched to the max without a day off between series, Tully stepped up on 2 days rest for Game 2 at Morton Field. Tully clearly wasn't at 100% but used his head and competitiveness to compensate for arm strength to keep Reading close early on with a 2-0 deficit. Lowell threatened to bust it open in the 3rd with the bases loaded when their hitter launched a ball to deep right center. The Reading centerfielder Scali with a full out run, leap and dive snagged the possible series-clinching hit from Lowell. Arguably one of the top catches ever seen at Morton at any level of baseball. Reading was down to their last 6 outs of the season and the Lowell hurler (9-0 record) was giving up nothing. Then it begins, as Tavoletti beats out an infield hit and then Scali and Altobello walk. Brown then steps to the plate and laces a 2 run single to center and plates the tying runs. Tully then provides the winning margin with an RBI single to make it 3-2 Reading. In the 7th with Tully throwing his 14th inning in less than 72 hours, Lowell starts a rally with 2 singles. Tully going on pure adrenaline fans Lowell's 3rd batter. With Lowell's clean up hitter at the plate, an attempted steal of 3rd is erased with a Ferraro throw and nice tag by Marchetti. The next pitch is called strike three, game over. Tully finishes the game with 13 K's and the season at 9-0, and a save.
+
+Game 3 at Shedd Park in Lowell brings out a large contingent on an unseasonably cool Sunday afternoon. Reading goes with Webb for his first start since Game 2 versus Andover. Reading playing loose with good karma and seemingly destiny on their side. Reading jumps all over Lowell in the first 3 innings shelling the second of their undefeated pitchers going up 8-2. Production up and down the lineup from Altobello 3 hits and 4 runs, Brown 2 hits and 2 RBIs, Ferraro a long double and 2 RBIs, Tully and Traugot 2 hits each. Lowell makes a comeback aided by some unfortunate defensive luck on Reading's side and a long triple to the deepest part of Shedd Park. Now at 8-7 Webb gets through the 5th inning against a surging and very vocal Lowell team thanks to an outstanding over the shoulder running and lunging catch in deep right field across the cinder running track by Chris Brown, which preserves the lead. This was the second day in a row that a game changing catch was made by a Reading outfielder. Then Reading tacks on a huge insurance run with a 2 out single from Tully in the 6th. In the bottom of the 6th Altobello relieves Webb with 2 runners on and no outs. From his demeanor he was seemingly the only player, coach or fan at the game that wasn't nervous as he induces 3 short fly outs which Tully (two) and Scali make very good plays on to stifle the rally. In the top of the 7th Reading has a chance to add some more insurance and what appeared to be a big 2 out RBI hit by Remondi is taken away by a head scratching call leaving the score at 9-7. In the bottom of the 7th, Lowell gets two solid hits around 2 strikeouts and with Lowell's tough 3 and 4 hitters coming up a sharp grounder is hit to third on a very hard infield surface, Traugot calmly fields, throws, and let the celebration begin.
+
+Reading Red is the first ever PONY league Senior division champion representing the Reading Babe Ruth League (by available records). Reading Red ended the season with a 17-10 record and a historical marker in the Reading Babe Ruth program.
+
+---
+
+Front: Coach Brown
 
 First Row (L to R) Mike Remondi-Nick Scali-Jason Tavoletti-Chris Brown-Kyle Webb-Scott Tully-Greg Altobello-Parker Traugot
 
-
-
-
- 
-
-
-
-
-Back Row (L to R)- Coach Zaccardi-Ian West-Drew Zaccardi-Owen Marchetti-Andrew Ferraro-Cam McCarthy-Coach Ferraro
+Back Row (L to R)- Coach Zaccardi-Ian West-Drew Zaccardi-Owen Marchetti-Andrew Ferraro-Cam McCarthy-Coach Ferraro
