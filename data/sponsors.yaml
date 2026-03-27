@@ -4,15 +4,15 @@
 
 - name: "Anthony's Roast Beef"
   url: "http://www.anthonysroastbeef.com/"
-  logo: "/images/sponsors/placeholder-sponsor.svg"
+  logo: "/images/sponsors/anthonys-roast-beef.jpg"
 
 - name: "Cupcake City"
   url: "http://www.cupcakecityreading.com/"
-  logo: "/images/sponsors/placeholder-sponsor.svg"
+  logo: "/images/sponsors/cupcake-city.jpg"
 
-- name: "Colombo's Pizza Cafe"
+- name: "Columbos"
   url: "http://www.colombospizzacafe.com"
-  logo: "/images/sponsors/placeholder-sponsor.svg"
+  logo: "/images/sponsors/columbos.png"
 
 - name: "Nella's Pizza"
   url: "https://nellaspizza.com/"
@@ -33,3 +33,7 @@
 - name: "Project Pinball"
   url: "https://projectpinball.org/"
   logo: "/images/sponsors/project-pinball.jpg"
+
+- name: "EJ's Fresh Pizza"
+  url: ""
+  logo: "/images/sponsors/ejs-fresh-pizza.jpg"
