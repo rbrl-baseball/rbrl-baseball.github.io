@@ -1,0 +1,20 @@
+{{ define "header" }}
+  {{ partials.Include "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="mw7 center ph3">
+    <header class="mt4 w-100">
+      <h1 class="f1 athelas mt3 mb1">{{ .Title }}</h1>
+      <p class="f6 gray mv2">
+        {{- .Date | time.Format "January 2, 2006" -}}
+        {{- with .Params.author }} · {{ . }}{{ end -}}
+      </p>
+    </header>
+    <div class="bg-white br3 shadow-4 pa4 mv4">
+      <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray">
+        {{- .Content -}}
+      </div>
+    </div>
+  </article>
+{{ end }}
