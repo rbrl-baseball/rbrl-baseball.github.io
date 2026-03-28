@@ -63,10 +63,20 @@ content:
           - name: title
             label: Title
             type: string
-            required: true
+            hidden: true
           - name: description
             label: Description
             type: string
+            hidden: true
+          - name: featured_image
+            type: string
+            hidden: true
+          - name: type
+            type: string
+            hidden: true
+          - name: menu
+            type: string
+            hidden: true
           - name: body
             label: Content
             type: rich-text
@@ -80,10 +90,20 @@ content:
           - name: title
             label: Title
             type: string
-            required: true
+            hidden: true
           - name: description
             label: Description
             type: string
+            hidden: true
+          - name: featured_image
+            type: string
+            hidden: true
+          - name: type
+            type: string
+            hidden: true
+          - name: menu
+            type: string
+            hidden: true
           - name: body
             label: Content
             type: rich-text
@@ -97,10 +117,20 @@ content:
           - name: title
             label: Title
             type: string
-            required: true
+            hidden: true
           - name: description
             label: Description
             type: string
+            hidden: true
+          - name: featured_image
+            type: string
+            hidden: true
+          - name: type
+            type: string
+            hidden: true
+          - name: menu
+            type: string
+            hidden: true
           - name: body
             label: Content
             type: rich-text
@@ -114,10 +144,23 @@ content:
           - name: title
             label: Title
             type: string
-            required: true
+            hidden: true
           - name: description
             label: Description
             type: string
+            hidden: true
+          - name: featured_image
+            type: string
+            hidden: true
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: menu
+            type: string
+            hidden: true
           - name: body
             label: Content
             type: rich-text
@@ -131,10 +174,23 @@ content:
           - name: title
             label: Title
             type: string
-            required: true
+            hidden: true
           - name: description
             label: Description
             type: string
+            hidden: true
+          - name: featured_image
+            type: string
+            hidden: true
+          - name: type
+            type: string
+            hidden: true
+          - name: layout
+            type: string
+            hidden: true
+          - name: menu
+            type: string
+            hidden: true
           - name: body
             label: Content
             type: rich-text
