@@ -45,8 +45,7 @@ PADRES (8) – Marcotte 1-1, Marino 3-1, Gosdanian 3-1, Bartalini 2-0, Alberto 3
 
 ANGELS (5) – Tighe 4-0, Michel 3-1, Ciccariello 3-2, Palm 3-0, Chapin 2-0, Cam Morrow 3-0, Wondolowski 3-1, Pucci 2-1, Koster 3-1, McGlinchey 2-0, Stuart 3-1, Cole Morrow 2-0. Totals 33-7
 
-Padres 011 105 0 – 8
-Angels 120 110 0 – 5
+<table class="line-score"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th class="line-score-total">R</th></tr></thead><tbody><tr><td class="line-score-team">Padres</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>5</td><td>0</td><td class="line-score-total">8</td></tr><tr><td class="line-score-team">Angels</td><td>1</td><td>2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td class="line-score-total">5</td></tr></tbody></table>
 
 Doubles: Ciccariello, Michel
 
