@@ -45,9 +45,9 @@ ROYALS (2)-. Keaveney 2-2, Vitarisi 2-0, A Koehler 1-0, Martello 2-0, Fitzgerald
 
 PIRATES (4) – Mirasolo 2-1, Robinson 2-1, LaMontagne 2-0, Marchlik 2-0, Prior 2-0, McKinnon 2-1, Santunioni 1-0, Travassos 2-0, Filipski 2-0, Manfredi 2-1, Criscuolo 1-0, Jenkins 2-0, Reid 0-0, Prescott 1-0, Rimkunas 1-0. Totals  24-4
 
-ROYALS     100 100 0 -2      
 
-PIRATES    310 000 x -4
+<table class="line-score"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th class="line-score-total">R</th></tr></thead><tbody><tr><td class="line-score-team">ROYALS</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td class="line-score-total">2</td></tr><tr><td class="line-score-team">PIRATES</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>x</td><td class="line-score-total">4</td></tr></tbody></table>
+
 
 Double: Robinson, Keaveney
 

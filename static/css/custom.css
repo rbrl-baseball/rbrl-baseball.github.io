@@ -282,6 +282,57 @@ tr:hover {
   background-color: #f9f9f9;
 }
 
+/* ============================================
+   Line Scores
+   ============================================ */
+.line-score {
+  width: auto;
+  margin: 1.5rem 0;
+  border: 2px solid var(--rbrl-blue);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.line-score th,
+.line-score td {
+  padding: 0.4rem 0.7rem;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.9rem;
+}
+
+.line-score thead tr {
+  background-color: var(--rbrl-blue);
+  color: white;
+}
+
+.line-score thead th {
+  background-color: var(--rbrl-blue);
+  color: white;
+  font-weight: 600;
+}
+
+.line-score .line-score-team {
+  text-align: left;
+  font-weight: 700;
+  padding-right: 1.5rem;
+  white-space: nowrap;
+}
+
+.line-score .line-score-total {
+  font-weight: 700;
+  border-left: 2px solid #ccc;
+}
+
+.line-score thead .line-score-total {
+  border-left: 2px solid rgba(255,255,255,0.4);
+}
+
+.line-score tbody tr:last-child td {
+  border-bottom: none;
+}
+
 /* GameChanger embed card */
 .gamechanger-embed {
   border: 2px solid #e0e0e0;

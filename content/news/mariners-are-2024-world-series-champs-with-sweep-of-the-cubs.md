@@ -45,9 +45,9 @@ CUBS (0)- Wright 2-1, E. Audley 2-1, Lepore 1-0, Capalino 1-0, Vigorito 2-0, Aus
 
 MARINERS (4) – Rizzo 3-1, Bentley 3-1, Sullivan 2-1, Wang 3-2, Furrier 3-3, O’Mara 3-0, Holton 3-0, Jack 3-0, Byrne 1-0, Van Geons 2-0, Sarofeen 2-0, Bowers 2-0. Totals  30-8
 
-Mariners   300 001 0 -4
 
-Cubs         000 000 0 -0
+<table class="line-score"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th class="line-score-total">R</th></tr></thead><tbody><tr><td class="line-score-team">Mariners</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td class="line-score-total">4</td></tr><tr><td class="line-score-team">Cubs</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="line-score-total">0</td></tr></tbody></table>
+
 
 Doubles: Bentley, Sullivan, Furrier, Rizzo, Van Horn
 

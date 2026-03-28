@@ -77,9 +77,9 @@ Gerardi         1 IP  3 R  1 H   1 K  3 BB
 
 Williamson    3 IP  3 R  4 H 3 K
 
-**MARLINS**        026 102 0  -11
 
-**MARINERS**     021  013 0   -7
+<table class="line-score"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th class="line-score-total">R</th></tr></thead><tbody><tr><td class="line-score-team">MARLINS</td><td>0</td><td>2</td><td>6</td><td>1</td><td>0</td><td>2</td><td>0</td><td class="line-score-total">11</td></tr><tr><td class="line-score-team">MARINERS</td><td>0</td><td>2</td><td>1</td><td>0</td><td>1</td><td>3</td><td>0</td><td class="line-score-total">7</td></tr></tbody></table>
+
 
 Doubles:  DiPietro, McGilvray
 

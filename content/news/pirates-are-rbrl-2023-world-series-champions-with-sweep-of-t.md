@@ -51,9 +51,9 @@ PIRATES (7) – Mirasolo 3-1, Robinson 2-0, LaMontagne 1-1, Marchlik 2-0, Prior 
 
 ROYALS (4)-. Keaveney 2-0, Vitarisi 3-1, Ventura 2-1, A Koehler 1-0, Martello 1-0, Fitzgerald 2-1, R Koehler 2-0, Payne 2-0, Lewis 2-0, Macari 2-0, Zelch 1-0, Borges 2-0, Joyce 2-1 Totals 24-4
 
-PIRATES    320 002 0 -7   
 
-ROYALS     200 200 0 -4
+<table class="line-score"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th class="line-score-total">R</th></tr></thead><tbody><tr><td class="line-score-team">PIRATES</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td class="line-score-total">7</td></tr><tr><td class="line-score-team">ROYALS</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td class="line-score-total">4</td></tr></tbody></table>
+
 
 Pitchers:
 

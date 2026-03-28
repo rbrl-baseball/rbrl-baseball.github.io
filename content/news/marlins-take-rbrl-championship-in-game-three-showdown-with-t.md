@@ -89,9 +89,9 @@ Miller                     3 IP  0 ER 2 H 1 K 2 BB
 
 Mulvey                  4 IP   0 ER 1 H 1 K
 
-**MARINERS     010 001 0 -2
 
-MARLINS         300 301 x -7**
+<table class="line-score"><thead><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th class="line-score-total">R</th></tr></thead><tbody><tr><td class="line-score-team">MARINERS</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td class="line-score-total">2</td></tr><tr><td class="line-score-team">MARLINS</td><td>3</td><td>0</td><td>0</td><td>3</td><td>0</td><td>1</td><td>x</td><td class="line-score-total">7</td></tr></tbody></table>
+
 
 Doubles:  Walsh, Gerardi
 
