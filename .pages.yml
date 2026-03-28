@@ -9,6 +9,11 @@ media:
     input: static/images/sponsors
     output: /images/sponsors
     categories: [image]
+  - name: team-logos
+    label: Team Logos
+    input: static/images/teams
+    output: /images/teams
+    categories: [image]
 
 content:
   - name: news
@@ -87,6 +92,40 @@ content:
         label: History
         type: file
         path: content/history/index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+
+      - name: teams-page
+        label: Teams
+        type: file
+        path: content/teams/index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: string
+          - name: body
+            label: Content
+            type: rich-text
+
+      - name: sponsors-page
+        label: Sponsors
+        type: file
+        path: content/sponsors/index.md
         format: yaml-frontmatter
         fields:
           - name: title
