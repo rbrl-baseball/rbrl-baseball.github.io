@@ -1,5 +1,24 @@
 /* RBRL Custom Styles */
 
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--rbrl-blue);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  z-index: 10000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ============================================
    Team Grid
    ============================================ */
@@ -112,9 +131,16 @@
   }
 }
 
-/* Pause animation on hover */
-.sponsor-ticker-track:hover .sponsor-ticker-inner {
+/* Pause animation on hover or keyboard focus */
+.sponsor-ticker-track:hover .sponsor-ticker-inner,
+.sponsor-ticker-track:focus-within .sponsor-ticker-inner {
   animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-ticker-inner {
+    animation: none;
+  }
 }
 
 /* ============================================

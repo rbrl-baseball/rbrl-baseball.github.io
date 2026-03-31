@@ -5,8 +5,9 @@
 {{ $max_games := .Get "max_games" | default (site.Params.gamechanger.max_games | default "4") }}
 {{ $element_id := printf "gc-scoreboard-widget-%s" (substr $widget_id 0 8) }}
 
-<div class="gamechanger-widget mv4">
+<div class="gamechanger-widget mv4" role="region" aria-label="Game Scores">
   <div id="{{ $element_id }}"></div>
+  <noscript><p>Live game scores are available via the GameChanger widget. Please enable JavaScript to view scores.</p></noscript>
   <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
   <script>
     window.GC.scoreboard.init({
