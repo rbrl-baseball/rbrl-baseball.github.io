@@ -93,17 +93,17 @@
     },
     {
       "date": "2026-04-25T18:45:00.000Z",
-      "home": "Mariners",
-      "away": "Angels",
-      "home_score": 11,
-      "away_score": 7
-    },
-    {
-      "date": "2026-04-25T18:45:00.000Z",
       "home": "Athletics",
       "away": "Phillies",
       "home_score": 4,
       "away_score": 13
+    },
+    {
+      "date": "2026-04-25T18:45:00.000Z",
+      "home": "Mariners",
+      "away": "Angels",
+      "home_score": 11,
+      "away_score": 7
     },
     {
       "date": "2026-04-25T21:00:00.000Z",
