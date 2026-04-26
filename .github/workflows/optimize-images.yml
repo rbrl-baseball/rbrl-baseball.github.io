@@ -6,6 +6,9 @@ on:
     paths:
       - "static/images/news/**"
 
+permissions:
+  contents: write
+
 jobs:
   optimize:
     runs-on: ubuntu-latest
