@@ -6,10 +6,7 @@ import urllib.request
 import yaml
 from pathlib import Path
 
-SCOREBOARD_URL = (
-    "https://api.team-manager.gc.com/public/widgets/scoreboard/"
-    "65041549-7a93-400a-a9ee-d67d9a3f8c9e"
-)
+TEAM_GAMES_URL = "https://api.team-manager.gc.com/public/teams/{team_id}/games"
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAMS_FILE = ROOT / "data" / "teams.yaml"
@@ -29,23 +26,85 @@ def load_teams():
     return team_map
 
 
-def fetch_scoreboard():
-    """Fetch all events from the GC scoreboard API."""
-    req = urllib.request.Request(SCOREBOARD_URL)
+def fetch_team_games(team_id):
+    """Fetch the games list for a single team."""
+    url = TEAM_GAMES_URL.format(team_id=team_id)
+    req = urllib.request.Request(url)
     with urllib.request.urlopen(req, timeout=30) as resp:
-        data = json.loads(resp.read())
-    return data["data"]["events"]
+        return json.loads(resp.read())
 
 
-def normalize_name(gc_name, team_map, gc_id):
-    """Return canonical team name from our data, falling back to GC name."""
-    if gc_id in team_map:
-        return team_map[gc_id]["name"]
-    return gc_name
+def resolve_opponent_name(gc_name, team_map):
+    """Map a GC opponent name to a canonical team name, or None if unknown.
+
+    GC names may include league prefixes/suffixes (e.g. "RBRL Padres",
+    "Mariners - RBRL"), so we match the canonical name as a case-insensitive
+    substring.
+    """
+    if not gc_name:
+        return None
+    lowered = gc_name.lower()
+    for info in team_map.values():
+        if info["name"].lower() in lowered:
+            return info["name"]
+    return None
 
 
-def compute_standings(events, team_map):
-    """Process events into standings and game results."""
+def collect_completed_games(team_map):
+    """Iterate every team's games endpoint and dedupe completed games.
+
+    The same physical game has a different id in each team's endpoint, so
+    we dedupe by (start_ts, frozenset of team names) instead of by id.
+    """
+    games = {}
+    for gc_id, info in team_map.items():
+        this_name = info["name"]
+        try:
+            data = fetch_team_games(gc_id)
+        except Exception as e:  # noqa: BLE001
+            print(f"Warning: failed to fetch games for {this_name} ({gc_id}): {e}")
+            continue
+
+        for g in data:
+            if g.get("game_status") != "completed":
+                continue
+            score = g.get("score") or {}
+            team_score = score.get("team")
+            opp_score = score.get("opponent_team")
+            if team_score is None or opp_score is None:
+                continue
+
+            opp_gc_name = (g.get("opponent_team") or {}).get("name", "")
+            opp_name = resolve_opponent_name(opp_gc_name, team_map)
+            if not opp_name:
+                # Non-league opponent; skip for standings purposes.
+                continue
+
+            start_ts = g.get("start_ts", "")
+            key = (start_ts, frozenset({this_name, opp_name}))
+            if key in games:
+                continue
+
+            if g.get("home_away") == "home":
+                home_name, away_name = this_name, opp_name
+                home_score, away_score = team_score, opp_score
+            else:
+                home_name, away_name = opp_name, this_name
+                home_score, away_score = opp_score, team_score
+
+            games[key] = {
+                "date": start_ts,
+                "home": home_name,
+                "away": away_name,
+                "home_score": home_score,
+                "away_score": away_score,
+            }
+
+    return list(games.values())
+
+
+def compute_standings(completed_games, team_map):
+    """Process completed games into standings and game results."""
     records = {}
     for info in team_map.values():
         records[info["name"]] = {
@@ -56,26 +115,17 @@ def compute_standings(events, team_map):
 
     game_results = []
 
-    for event in events:
-        home = event.get("home_team", {})
-        away = event.get("away_team", {})
-        score = event.get("score")
-
-        if not score:
-            continue
-
-        home_id = home.get("id", "")
-        away_id = away.get("id", "")
-        home_name = normalize_name(home.get("name", ""), team_map, home_id)
-        away_name = normalize_name(away.get("name", ""), team_map, away_id)
-        home_score = score.get("home_team", score.get("team", 0))
-        away_score = score.get("opponent_team", score.get("away_team", 0))
+    for g in completed_games:
+        home_name = g["home"]
+        away_name = g["away"]
+        home_score = g["home_score"]
+        away_score = g["away_score"]
 
         if home_name not in records or away_name not in records:
             continue
 
         game_results.append({
-            "date": event.get("start_ts", ""),
+            "date": g["date"],
             "home": home_name,
             "away": away_name,
             "home_score": home_score,
@@ -113,8 +163,8 @@ def compute_standings(events, team_map):
 
 def main():
     team_map = load_teams()
-    events = fetch_scoreboard()
-    standings = compute_standings(events, team_map)
+    completed = collect_completed_games(team_map)
+    standings = compute_standings(completed, team_map)
 
     with open(STANDINGS_FILE, "w") as f:
         json.dump(standings, f, indent=2)

@@ -1,10 +1,26 @@
 {
   "american_league": [
     {
+      "name": "Mariners",
+      "division": "american_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2
+    },
+    {
+      "name": "Royals",
+      "division": "american_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2
+    },
+    {
       "name": "Angels",
       "division": "american_league",
       "w": 0,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 0
     },
@@ -12,7 +28,7 @@
       "name": "Astros",
       "division": "american_league",
       "w": 0,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 0
     },
@@ -20,41 +36,41 @@
       "name": "Athletics",
       "division": "american_league",
       "w": 0,
-      "l": 0,
-      "t": 0,
-      "points": 0
-    },
-    {
-      "name": "Mariners",
-      "division": "american_league",
-      "w": 0,
-      "l": 0,
-      "t": 0,
-      "points": 0
-    },
-    {
-      "name": "Royals",
-      "division": "american_league",
-      "w": 0,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 0
     }
   ],
   "national_league": [
     {
+      "name": "Marlins",
+      "division": "national_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2
+    },
+    {
+      "name": "Phillies",
+      "division": "national_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2
+    },
+    {
+      "name": "Pirates",
+      "division": "national_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2
+    },
+    {
       "name": "Cubs",
       "division": "national_league",
       "w": 0,
-      "l": 0,
-      "t": 0,
-      "points": 0
-    },
-    {
-      "name": "Marlins",
-      "division": "national_league",
-      "w": 0,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 0
     },
@@ -62,26 +78,46 @@
       "name": "Padres",
       "division": "national_league",
       "w": 0,
-      "l": 0,
-      "t": 0,
-      "points": 0
-    },
-    {
-      "name": "Phillies",
-      "division": "national_league",
-      "w": 0,
-      "l": 0,
-      "t": 0,
-      "points": 0
-    },
-    {
-      "name": "Pirates",
-      "division": "national_league",
-      "w": 0,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 0
     }
   ],
-  "games": []
+  "games": [
+    {
+      "date": "2026-04-25T16:30:00.000Z",
+      "home": "Pirates",
+      "away": "Padres",
+      "home_score": 6,
+      "away_score": 4
+    },
+    {
+      "date": "2026-04-25T18:45:00.000Z",
+      "home": "Mariners",
+      "away": "Angels",
+      "home_score": 11,
+      "away_score": 7
+    },
+    {
+      "date": "2026-04-25T18:45:00.000Z",
+      "home": "Athletics",
+      "away": "Phillies",
+      "home_score": 4,
+      "away_score": 13
+    },
+    {
+      "date": "2026-04-25T21:00:00.000Z",
+      "home": "Marlins",
+      "away": "Astros",
+      "home_score": 11,
+      "away_score": 1
+    },
+    {
+      "date": "2026-04-25T21:00:00.000Z",
+      "home": "Royals",
+      "away": "Cubs",
+      "home_score": 11,
+      "away_score": 4
+    }
+  ]
 }
