@@ -165,8 +165,36 @@ content:
             label: Content
             type: rich-text
 
-      - name: sponsors-page
+      - name: sponsors-data
         label: Sponsors
+        type: file
+        path: data/sponsors.yaml
+        format: yaml
+        list: true
+        view:
+          fields: [name, url]
+        fields:
+          - name: name
+            label: Sponsor Name
+            type: string
+            required: true
+          - name: url
+            label: Website URL
+            type: string
+            description: Full URL including https://
+            pattern:
+              regex: '^https?://.+'
+              message: "Must start with http:// or https://"
+          - name: logo
+            label: Logo
+            type: image
+            required: true
+            description: Recommended size ~200x100, PNG/JPG/SVG
+            options:
+              media: sponsor-logos
+
+      - name: sponsors-page
+        label: Sponsors Page
         type: file
         path: content/sponsors/index.md
         format: yaml-frontmatter
