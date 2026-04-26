@@ -1,0 +1,38 @@
+{{ define "header" }}
+  <header>
+    <div class="pb3-m pb6-l {{ .Site.Params.background_color_class | compare.Default "bg-black" }}">
+      {{ partials.Include "site-navigation.html" . }}
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          {{ site.Title }}
+        </h1>
+        {{ with site.Params.description }}
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            {{ . }}
+          </h2>
+        {{ end }}
+      </div>
+    </div>
+  </header>
+{{ end }}
+
+{{ define "main" }}
+  <section class="w-100 pv5">
+    <div class="ph3 ph5-l center mw7 tc">
+      <div class="f1 mb3" aria-hidden="true">⚾</div>
+      <h1 class="f2 f1-l fw6 dark-blue lh-title mt0 mb3">
+        Strike three — that page is out.
+      </h1>
+      <p class="f4 lh-copy mid-gray mb4">
+        We recently redesigned the site, so a few links have moved
+        around the diamond. The page you were looking for isn't here,
+        but here are some good places to head next:
+      </p>
+      <ul class="list pl0 f4 lh-copy">
+        <li class="mb2"><a href="/" class="link dark-blue dim fw6">🏠 Home</a></li>
+        <li class="mb2"><a href="/news/" class="link dark-blue dim fw6">📰 News</a></li>
+        <li class="mb2"><a href="/schedule/" class="link dark-blue dim fw6">⚾ Schedule</a></li>
+      </ul>
+    </div>
+  </section>
+{{ end }}
