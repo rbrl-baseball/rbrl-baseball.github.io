@@ -31,11 +31,23 @@
       <div id="gc-scoreboard-widget-homepage"></div>
       <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
       <script>
-        window.GC.scoreboard.init({
-          target: "#gc-scoreboard-widget-homepage",
-          widgetId: "{{ site.Params.gamechanger.widget_id | default "65041549-7a93-400a-a9ee-d67d9a3f8c9e" }}",
-          maxVerticalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
-        })
+        (function () {
+          // Show games starting from yesterday so recent results are visible
+          // alongside upcoming games. The widget's underlying API accepts a
+          // `start` query param (YYYY-MM-DD) that we pass through via the
+          // SDK's `options` escape hatch.
+          var yesterday = new Date();
+          yesterday.setDate(yesterday.getDate() - 1);
+          var start = yesterday.getFullYear() + "-" +
+            String(yesterday.getMonth() + 1).padStart(2, "0") + "-" +
+            String(yesterday.getDate()).padStart(2, "0");
+          window.GC.scoreboard.init({
+            target: "#gc-scoreboard-widget-homepage",
+            widgetId: "{{ site.Params.gamechanger.widget_id | default "65041549-7a93-400a-a9ee-d67d9a3f8c9e" }}",
+            maxVerticalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
+            options: { start: start },
+          });
+        })();
       </script>
       <a href="/schedule/" class="f5 link dim dark-blue mt3 dib">View full schedule →</a>
     </div>
