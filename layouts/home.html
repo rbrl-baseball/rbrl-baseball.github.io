@@ -44,6 +44,7 @@
           window.GC.scoreboard.init({
             target: "#gc-scoreboard-widget-homepage",
             widgetId: "{{ site.Params.gamechanger.widget_id | default "65041549-7a93-400a-a9ee-d67d9a3f8c9e" }}",
+            layout: "vertical",
             maxVerticalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
             options: { start: start },
           });
