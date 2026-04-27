@@ -1,15 +1,15 @@
 {
   "american_league": [
     {
-      "name": "Mariners",
+      "name": "Royals",
       "division": "american_league",
-      "w": 1,
+      "w": 2,
       "l": 0,
       "t": 0,
-      "points": 2
+      "points": 4
     },
     {
-      "name": "Royals",
+      "name": "Mariners",
       "division": "american_league",
       "w": 1,
       "l": 0,
@@ -25,7 +25,7 @@
       "points": 0
     },
     {
-      "name": "Astros",
+      "name": "Athletics",
       "division": "american_league",
       "w": 0,
       "l": 1,
@@ -33,10 +33,10 @@
       "points": 0
     },
     {
-      "name": "Athletics",
+      "name": "Astros",
       "division": "american_league",
       "w": 0,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 0
     }
@@ -59,20 +59,20 @@
       "points": 2
     },
     {
-      "name": "Pirates",
+      "name": "Cubs",
       "division": "national_league",
       "w": 1,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 2
     },
     {
-      "name": "Cubs",
+      "name": "Pirates",
       "division": "national_league",
-      "w": 0,
+      "w": 1,
       "l": 1,
       "t": 0,
-      "points": 0
+      "points": 2
     },
     {
       "name": "Padres",
@@ -118,6 +118,20 @@
       "away": "Cubs",
       "home_score": 11,
       "away_score": 4
+    },
+    {
+      "date": "2026-04-26T21:00:00.000Z",
+      "home": "Cubs",
+      "away": "Pirates",
+      "home_score": 9,
+      "away_score": 6
+    },
+    {
+      "date": "2026-04-26T21:00:00.000Z",
+      "home": "Royals",
+      "away": "Astros",
+      "home_score": 10,
+      "away_score": 0
     }
   ]
 }
