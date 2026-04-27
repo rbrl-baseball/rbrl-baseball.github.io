@@ -6,7 +6,11 @@
       "w": 2,
       "l": 0,
       "t": 0,
-      "points": 4
+      "points": 4,
+      "division_points": 2,
+      "runs_scored": 21,
+      "runs_allowed": 4,
+      "division_runs_allowed": 0
     },
     {
       "name": "Mariners",
@@ -14,15 +18,11 @@
       "w": 1,
       "l": 0,
       "t": 0,
-      "points": 2
-    },
-    {
-      "name": "Angels",
-      "division": "american_league",
-      "w": 0,
-      "l": 1,
-      "t": 0,
-      "points": 0
+      "points": 2,
+      "division_points": 2,
+      "runs_scored": 11,
+      "runs_allowed": 7,
+      "division_runs_allowed": 7
     },
     {
       "name": "Athletics",
@@ -30,7 +30,11 @@
       "w": 0,
       "l": 1,
       "t": 0,
-      "points": 0
+      "points": 0,
+      "division_points": 0,
+      "runs_scored": 4,
+      "runs_allowed": 13,
+      "division_runs_allowed": 0
     },
     {
       "name": "Astros",
@@ -38,33 +42,37 @@
       "w": 0,
       "l": 2,
       "t": 0,
-      "points": 0
+      "points": 0,
+      "division_points": 0,
+      "runs_scored": 1,
+      "runs_allowed": 21,
+      "division_runs_allowed": 10
+    },
+    {
+      "name": "Angels",
+      "division": "american_league",
+      "w": 0,
+      "l": 1,
+      "t": 0,
+      "points": 0,
+      "division_points": 0,
+      "runs_scored": 7,
+      "runs_allowed": 11,
+      "division_runs_allowed": 11
     }
   ],
   "national_league": [
-    {
-      "name": "Marlins",
-      "division": "national_league",
-      "w": 1,
-      "l": 0,
-      "t": 0,
-      "points": 2
-    },
-    {
-      "name": "Phillies",
-      "division": "national_league",
-      "w": 1,
-      "l": 0,
-      "t": 0,
-      "points": 2
-    },
     {
       "name": "Cubs",
       "division": "national_league",
       "w": 1,
       "l": 1,
       "t": 0,
-      "points": 2
+      "points": 2,
+      "division_points": 2,
+      "runs_scored": 13,
+      "runs_allowed": 17,
+      "division_runs_allowed": 6
     },
     {
       "name": "Pirates",
@@ -72,7 +80,35 @@
       "w": 1,
       "l": 1,
       "t": 0,
-      "points": 2
+      "points": 2,
+      "division_points": 2,
+      "runs_scored": 12,
+      "runs_allowed": 13,
+      "division_runs_allowed": 13
+    },
+    {
+      "name": "Marlins",
+      "division": "national_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2,
+      "division_points": 0,
+      "runs_scored": 11,
+      "runs_allowed": 1,
+      "division_runs_allowed": 0
+    },
+    {
+      "name": "Phillies",
+      "division": "national_league",
+      "w": 1,
+      "l": 0,
+      "t": 0,
+      "points": 2,
+      "division_points": 0,
+      "runs_scored": 13,
+      "runs_allowed": 4,
+      "division_runs_allowed": 0
     },
     {
       "name": "Padres",
@@ -80,7 +116,11 @@
       "w": 0,
       "l": 1,
       "t": 0,
-      "points": 0
+      "points": 0,
+      "division_points": 0,
+      "runs_scored": 4,
+      "runs_allowed": 6,
+      "division_runs_allowed": 6
     }
   ],
   "games": [

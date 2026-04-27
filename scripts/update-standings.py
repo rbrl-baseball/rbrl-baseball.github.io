@@ -71,12 +71,19 @@ def collect_completed_games(team_map):
 
 def compute_standings(completed_games, team_map):
     """Process completed games into standings and game results."""
+    # Map team name -> division for quick lookup during accumulation.
+    division_of = {info["name"]: info["division"] for info in team_map.values()}
+
     records = {}
     for info in team_map.values():
         records[info["name"]] = {
             "name": info["name"],
             "division": info["division"],
             "w": 0, "l": 0, "t": 0, "points": 0,
+            "division_points": 0,
+            "runs_scored": 0,
+            "runs_allowed": 0,
+            "division_runs_allowed": 0,
         }
 
     game_results = []
@@ -98,26 +105,44 @@ def compute_standings(completed_games, team_map):
             "away_score": away_score,
         })
 
+        same_division = division_of[home_name] == division_of[away_name]
+
+        # Runs scored / allowed (overall and division-scoped)
+        records[home_name]["runs_scored"] += home_score
+        records[home_name]["runs_allowed"] += away_score
+        records[away_name]["runs_scored"] += away_score
+        records[away_name]["runs_allowed"] += home_score
+        if same_division:
+            records[home_name]["division_runs_allowed"] += away_score
+            records[away_name]["division_runs_allowed"] += home_score
+
         if home_score > away_score:
             records[home_name]["w"] += 1
             records[away_name]["l"] += 1
+            if same_division:
+                records[home_name]["division_points"] += 2
         elif away_score > home_score:
             records[away_name]["w"] += 1
             records[home_name]["l"] += 1
+            if same_division:
+                records[away_name]["division_points"] += 2
         else:
             records[home_name]["t"] += 1
             records[away_name]["t"] += 1
+            if same_division:
+                records[home_name]["division_points"] += 1
+                records[away_name]["division_points"] += 1
 
     for r in records.values():
         r["points"] = r["w"] * 2 + r["t"]
 
-    al = sorted(
+    al = order_division(
         [r for r in records.values() if r["division"] == "american_league"],
-        key=lambda x: (-x["points"], -x["w"], x["l"]),
+        game_results,
     )
-    nl = sorted(
+    nl = order_division(
         [r for r in records.values() if r["division"] == "national_league"],
-        key=lambda x: (-x["points"], -x["w"], x["l"]),
+        game_results,
     )
 
     return {
@@ -125,6 +150,92 @@ def compute_standings(completed_games, team_map):
         "national_league": nl,
         "games": sorted(game_results, key=lambda g: g["date"]),
     }
+
+
+def order_division(teams, games):
+    """Sort a division's teams: by points first, then league tiebreakers."""
+    # Group by points (primary). Within each group, run the recursive
+    # tiebreaker. Higher points come first.
+    by_points = {}
+    for t in teams:
+        by_points.setdefault(t["points"], []).append(t)
+
+    ordered = []
+    for pts in sorted(by_points.keys(), reverse=True):
+        ordered.extend(resolve_ties(by_points[pts], games))
+    return ordered
+
+
+def head_to_head_points(team_name, opponents, games):
+    """Points (2W + 1T) for `team_name` against any team in `opponents`."""
+    pts = 0
+    for g in games:
+        home, away = g["home"], g["away"]
+        if team_name == home and away in opponents:
+            opp_score, my_score = g["away_score"], g["home_score"]
+        elif team_name == away and home in opponents:
+            opp_score, my_score = g["home_score"], g["away_score"]
+        else:
+            continue
+        if my_score > opp_score:
+            pts += 2
+        elif my_score == opp_score:
+            pts += 1
+    return pts
+
+
+def head_to_head_runs_allowed(team_name, opponents, games):
+    """Runs allowed by `team_name` in games against any team in `opponents`."""
+    ra = 0
+    for g in games:
+        home, away = g["home"], g["away"]
+        if team_name == home and away in opponents:
+            ra += g["away_score"]
+        elif team_name == away and home in opponents:
+            ra += g["home_score"]
+    return ra
+
+
+def resolve_ties(group, games):
+    """Order teams tied on points using the league's tiebreakers.
+
+    Rules (in order):
+      a. Head-to-head points (most)
+      b. Division points (most)
+      c. Head-to-head runs allowed (fewest)
+      d. Division runs allowed (fewest)
+      e. Overall runs allowed (fewest)
+      Fallback: alphabetical by team name.
+
+    At each step, the team(s) tied for first on the metric stay
+    together; the rest are "eliminated" below them. Both sub-groups
+    then recurse from step (a). If a step does not separate anyone,
+    fall through to the next step.
+    """
+    if len(group) <= 1:
+        return list(group)
+
+    others = {t["name"] for t in group}
+
+    # (metric_fn, prefer_max?) — prefer_max=True for points, False for RA.
+    steps = [
+        (lambda t: head_to_head_points(t["name"], others - {t["name"]}, games), True),
+        (lambda t: t["division_points"], True),
+        (lambda t: head_to_head_runs_allowed(t["name"], others - {t["name"]}, games), False),
+        (lambda t: t["division_runs_allowed"], False),
+        (lambda t: t["runs_allowed"], False),
+    ]
+
+    for metric_fn, prefer_max in steps:
+        scored = [(metric_fn(t), t) for t in group]
+        best = max(s for s, _ in scored) if prefer_max else min(s for s, _ in scored)
+        winners = [t for s, t in scored if s == best]
+        eliminated = [t for s, t in scored if s != best]
+        if eliminated:
+            return resolve_ties(winners, games) + resolve_ties(eliminated, games)
+
+    # Fully unresolved — fall back to alphabetical for stability.
+    return sorted(group, key=lambda t: t["name"])
 
 
 def main():
