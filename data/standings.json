@@ -16,24 +16,24 @@
       "name": "Mariners",
       "division": "american_league",
       "w": 1,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 11,
-      "runs_allowed": 7,
+      "runs_scored": 12,
+      "runs_allowed": 13,
       "division_runs_allowed": 7
     },
     {
       "name": "Athletics",
       "division": "american_league",
       "w": 0,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 0,
       "division_points": 0,
-      "runs_scored": 4,
-      "runs_allowed": 13,
+      "runs_scored": 6,
+      "runs_allowed": 24,
       "division_runs_allowed": 0
     },
     {
@@ -63,6 +63,30 @@
   ],
   "national_league": [
     {
+      "name": "Marlins",
+      "division": "national_league",
+      "w": 2,
+      "l": 0,
+      "t": 0,
+      "points": 4,
+      "division_points": 0,
+      "runs_scored": 22,
+      "runs_allowed": 3,
+      "division_runs_allowed": 0
+    },
+    {
+      "name": "Phillies",
+      "division": "national_league",
+      "w": 2,
+      "l": 0,
+      "t": 0,
+      "points": 4,
+      "division_points": 0,
+      "runs_scored": 19,
+      "runs_allowed": 5,
+      "division_runs_allowed": 0
+    },
+    {
       "name": "Cubs",
       "division": "national_league",
       "w": 1,
@@ -70,7 +94,7 @@
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 13,
+      "runs_scored": 11,
       "runs_allowed": 17,
       "division_runs_allowed": 6
     },
@@ -83,32 +107,8 @@
       "points": 2,
       "division_points": 2,
       "runs_scored": 12,
-      "runs_allowed": 13,
-      "division_runs_allowed": 13
-    },
-    {
-      "name": "Marlins",
-      "division": "national_league",
-      "w": 1,
-      "l": 0,
-      "t": 0,
-      "points": 2,
-      "division_points": 0,
-      "runs_scored": 11,
-      "runs_allowed": 1,
-      "division_runs_allowed": 0
-    },
-    {
-      "name": "Phillies",
-      "division": "national_league",
-      "w": 1,
-      "l": 0,
-      "t": 0,
-      "points": 2,
-      "division_points": 0,
-      "runs_scored": 13,
-      "runs_allowed": 4,
-      "division_runs_allowed": 0
+      "runs_allowed": 11,
+      "division_runs_allowed": 11
     },
     {
       "name": "Padres",
@@ -163,7 +163,7 @@
       "date": "2026-04-26T21:00:00.000Z",
       "home": "Cubs",
       "away": "Pirates",
-      "home_score": 9,
+      "home_score": 7,
       "away_score": 6
     },
     {
@@ -172,6 +172,20 @@
       "away": "Astros",
       "home_score": 10,
       "away_score": 0
+    },
+    {
+      "date": "2026-04-27T21:45:00.000Z",
+      "home": "Phillies",
+      "away": "Mariners",
+      "home_score": 6,
+      "away_score": 1
+    },
+    {
+      "date": "2026-04-27T21:45:00.000Z",
+      "home": "Athletics",
+      "away": "Marlins",
+      "home_score": 2,
+      "away_score": 11
     }
   ]
 }
