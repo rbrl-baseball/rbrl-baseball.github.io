@@ -14,19 +14,19 @@
         <table class="standings-table w-100 collapse">
           <thead>
             <tr class="bg-near-white">
-              <th class="pa2 tl f7 ttu tracked">#</th>
-              <th class="pa2 tl f7 ttu tracked">Team</th>
-              <th class="pa2 tc f7 ttu tracked">W</th>
-              <th class="pa2 tc f7 ttu tracked">L</th>
-              <th class="pa2 tc f7 ttu tracked">T</th>
-              <th class="pa2 tc f7 ttu tracked fw7">PTS</th>
+              <th class="pa2 tl f7 ttu tracked" scope="col">#</th>
+              <th class="pa2 tl f7 ttu tracked" scope="col">Team</th>
+              <th class="pa2 tc f7 ttu tracked" scope="col">W</th>
+              <th class="pa2 tc f7 ttu tracked" scope="col">L</th>
+              <th class="pa2 tc f7 ttu tracked" scope="col">T</th>
+              <th class="pa2 tc f7 ttu tracked fw7" scope="col">PTS</th>
             </tr>
           </thead>
           <tbody>
             {{ range $i, $team := $standings.american_league }}
             <tr class="standings-row{{ if eq $i 0 }} standings-leader{{ end }}">
               <td class="pa2 tc mid-gray f6">{{ add $i 1 }}</td>
-              <td class="pa2 fw6 f6">{{ $team.name }}</td>
+              <th class="pa2 fw6 f6 tl" scope="row">{{ $team.name }}</th>
               <td class="pa2 tc f6">{{ $team.w }}</td>
               <td class="pa2 tc f6">{{ $team.l }}</td>
               <td class="pa2 tc f6">{{ $team.t }}</td>
@@ -47,19 +47,19 @@
         <table class="standings-table w-100 collapse">
           <thead>
             <tr class="bg-near-white">
-              <th class="pa2 tl f7 ttu tracked">#</th>
-              <th class="pa2 tl f7 ttu tracked">Team</th>
-              <th class="pa2 tc f7 ttu tracked">W</th>
-              <th class="pa2 tc f7 ttu tracked">L</th>
-              <th class="pa2 tc f7 ttu tracked">T</th>
-              <th class="pa2 tc f7 ttu tracked fw7">PTS</th>
+              <th class="pa2 tl f7 ttu tracked" scope="col">#</th>
+              <th class="pa2 tl f7 ttu tracked" scope="col">Team</th>
+              <th class="pa2 tc f7 ttu tracked" scope="col">W</th>
+              <th class="pa2 tc f7 ttu tracked" scope="col">L</th>
+              <th class="pa2 tc f7 ttu tracked" scope="col">T</th>
+              <th class="pa2 tc f7 ttu tracked fw7" scope="col">PTS</th>
             </tr>
           </thead>
           <tbody>
             {{ range $i, $team := $standings.national_league }}
             <tr class="standings-row{{ if eq $i 0 }} standings-leader{{ end }}">
               <td class="pa2 tc mid-gray f6">{{ add $i 1 }}</td>
-              <td class="pa2 fw6 f6">{{ $team.name }}</td>
+              <th class="pa2 fw6 f6 tl" scope="row">{{ $team.name }}</th>
               <td class="pa2 tc f6">{{ $team.w }}</td>
               <td class="pa2 tc f6">{{ $team.l }}</td>
               <td class="pa2 tc f6">{{ $team.t }}</td>

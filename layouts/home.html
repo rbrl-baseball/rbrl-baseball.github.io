@@ -55,6 +55,20 @@
             maxHorizontalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
             options: { start: fmt(today), end: fmt(tomorrow) },
           });
+          // The GameChanger SDK injects an <iframe> after init but doesn't set
+          // a title attribute, which screen readers need. Watch for the iframe
+          // and label it once it appears.
+          var host = document.getElementById("gc-scoreboard-widget-homepage");
+          if (host && "MutationObserver" in window) {
+            var obs = new MutationObserver(function () {
+              var f = host.querySelector("iframe:not([title])");
+              if (f) {
+                f.setAttribute("title", "GameChanger upcoming games scoreboard");
+                obs.disconnect();
+              }
+            });
+            obs.observe(host, { childList: true, subtree: true });
+          }
         })();
       </script>
       <a href="/schedule/" class="f5 link dim dark-blue mt3 dib">View full schedule →</a>

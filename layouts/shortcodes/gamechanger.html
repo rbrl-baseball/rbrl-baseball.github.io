@@ -15,6 +15,20 @@
       widgetId: "{{ $widget_id }}",
       layout: "vertical",
       maxVerticalGamesVisible: {{ $max_games }},
-    })
+    });
+    // GameChanger SDK injects an <iframe> without a title; observe the host
+    // and label it for screen readers once it appears.
+    (function () {
+      var host = document.getElementById("{{ $element_id }}");
+      if (!host || !("MutationObserver" in window)) return;
+      var obs = new MutationObserver(function () {
+        var f = host.querySelector("iframe:not([title])");
+        if (f) {
+          f.setAttribute("title", "GameChanger schedule and scoreboard");
+          obs.disconnect();
+        }
+      });
+      obs.observe(host, { childList: true, subtree: true });
+    })();
   </script>
 </div>

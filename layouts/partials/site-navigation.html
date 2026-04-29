@@ -1,5 +1,5 @@
 <a href="#main-content" class="skip-link">Skip to main content</a>
-<nav class="pv3 ph3 ph4-ns" role="navigation">
+<nav class="pv3 ph3 ph4-ns" role="navigation" aria-label="Main">
   <div class="flex items-center justify-between">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white dib no-underline">
       {{ with .Site.Params.site_logo }}
@@ -23,9 +23,11 @@
       {{ partials.Include "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
         <ul class="pl0 mr3">
+          {{ $current := .RelPermalink }}
           {{ range .Site.Menus.main }}
+          {{ $active := or (eq .URL $current) (and (ne .URL "/") (hasPrefix $current .URL)) }}
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white white no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+            <a class="hover-white white no-underline"{{ if $active }} aria-current="page"{{ end }} href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
               {{ .Name }}
             </a>
           </li>
@@ -39,9 +41,11 @@
   {{ if .Site.Menus.main }}
   <div id="mobile-menu" class="mobile-menu" role="navigation" aria-label="Mobile">
     <ul class="list pl0 mt3 mb0">
+      {{ $current := .RelPermalink }}
       {{ range .Site.Menus.main }}
+      {{ $active := or (eq .URL $current) (and (ne .URL "/") (hasPrefix $current .URL)) }}
       <li class="pv2 bb b--white-20">
-        <a class="hover-white white no-underline f5" href="{{ .URL }}">
+        <a class="hover-white white no-underline f5"{{ if $active }} aria-current="page"{{ end }} href="{{ .URL }}">
           {{ .Name }}
         </a>
       </li>
