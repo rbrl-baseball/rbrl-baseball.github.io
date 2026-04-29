@@ -1,17 +1,15 @@
 ---
-title: "League History"
-description: "History of Reading Babe Ruth League"
-featured_image: ""
-type: "page"
-menu: ""
+title: League History
+description: History of Reading Babe Ruth League
+type: page
 ---
-
 Reading Babe Ruth League has a proud tradition of youth baseball, having recently celebrated its fiftieth season. We're thrilled that many of our managers and umpires are former players who grew up in the league — a testament to the lasting impact Reading Babe Ruth has on the young athletes who play here.
 
 ### World Series Champions
 
+
 | Year | Champion | Manager | Runner-Up |
-|------|----------|---------|-----------|
+| ---- | --------------------- | ---------------------------- | ----------------- |
 | 2025 | Pirates | Alex Jaked | Mariners |
 | 2024 | Mariners | Mike Rizzo | Cubs |
 | 2023 | Pirates | Derek Prior | Royals |
@@ -48,21 +46,22 @@ Reading Babe Ruth League has a proud tradition of youth baseball, having recentl
 | 1992 | Expos | Preston Lucas | Royals |
 | 1991 | Royals | Paul Langone | Pirates |
 | 1990 | Phillies | Jack Webster | Expos |
-| 1989 | | | |
-| 1988 | | | |
-| 1987 | | | |
-| 1986 | | | |
-| 1985 | | | |
-| 1984 | | | |
-| 1983 | | | |
-| 1982 | | | |
-| 1981 | | | |
-| 1980 | | | |
-| 1979 | | | |
-| 1978 | | | |
-| 1977 | | | |
-| 1976 | | | |
+| 1989 | VFW (18-1) | Reggie Chambers | CBL Associates |
+| 1988 | Hodson Oil |  | Atlantic Parking |
+| 1987 | VFW | John Murphy | CBL Associates |
+| 1986 | Rotondi Contractors | Kevin Brown | Yankee Systems |
+| 1985 | Bells Barber Shop | Lanny Millett | Hodson Oil |
+| 1984 | Reading Cycles |  | Teel Insurance |
+| 1983 | Gregorys (undefeated) |  | Reading Cycles |
+| 1982 | VFW | Carl Balestrier | DeMarco |
+| 1981 | Rotondi Contractors | Joe Quilty | College Marketing |
+| 1980 | Reading Savings Bank | Bob D'Ambrosio | DeMarco |
+| 1979 | Reading Police | Dave Powers | Square Liquors |
+| 1978 | College Marketing | Jim Angelo | DiNapoli Trucking |
+| 1977 | Stingers | Pat Franzosa | All Electric |
+| 1976 | All Electric | Penn Michelini | Stingers |
 | 1975 | Reading Savings | Dick Murdoch | Townies |
+
 
 *Years not listed are being researched. If you have information about past seasons, please contact the president.*
 
@@ -70,8 +69,9 @@ Reading Babe Ruth League has a proud tradition of youth baseball, having recentl
 
 The World Series MVP award has been given to the outstanding player of the World Series since 2017.
 
+
 | Year | MVP | Team |
-|------|-----|------|
+| ---- | ------------------ | --------- |
 | 2025 | Owen Prior | Pirates |
 | 2024 | AJ Rizzo | Mariners |
 | 2023 | Brandon LaMontagne | Pirates |
@@ -81,3 +81,5 @@ The World Series MVP award has been given to the outstanding player of the World
 | 2019 | Michael DiPietro | Marlins |
 | 2018 | Dom Pucci | Angels |
 | 2017 | Steve Needham | White Sox |
+
+
