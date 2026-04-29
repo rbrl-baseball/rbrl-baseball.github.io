@@ -309,6 +309,27 @@ tr:hover {
 }
 
 /* ============================================
+   Sticky footer — keep footer at bottom of viewport
+   on short pages
+   ============================================ */
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+}
+
+body > footer {
+  flex-shrink: 0;
+}
+
+/* ============================================
    Recent Results (homepage)
    ============================================ */
 .recent-results-grid {
