@@ -10,7 +10,7 @@ Reading Babe Ruth League has a proud tradition of youth baseball, having recentl
 
 | Year | Champion | Manager | Runner-Up |
 | ---- | --------------------- | ---------------------------- | ----------------- |
-| 2025 | Pirates | Alex Jaked | Mariners |
+| 2025 | Pirates | Alex Jaked | Mariners |Mike Rizzo
 | 2024 | Mariners | Mike Rizzo | Cubs |
 | 2023 | Pirates | Derek Prior | Royals |
 | 2022 | Mariners | Scott Farris | Pirates |
