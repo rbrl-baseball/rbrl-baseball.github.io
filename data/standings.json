@@ -52,12 +52,12 @@
       "name": "Angels",
       "division": "american_league",
       "w": 0,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 0,
       "division_points": 0,
       "runs_scored": 7,
-      "runs_allowed": 11,
+      "runs_allowed": 15,
       "division_runs_allowed": 11
     }
   ],
@@ -113,12 +113,12 @@
     {
       "name": "Padres",
       "division": "national_league",
-      "w": 0,
+      "w": 1,
       "l": 1,
       "t": 0,
-      "points": 0,
+      "points": 2,
       "division_points": 0,
-      "runs_scored": 4,
+      "runs_scored": 8,
       "runs_allowed": 6,
       "division_runs_allowed": 6
     }
@@ -186,6 +186,13 @@
       "away": "Marlins",
       "home_score": 2,
       "away_score": 11
+    },
+    {
+      "date": "2026-04-28T21:45:00.000Z",
+      "home": "Padres",
+      "away": "Angels",
+      "home_score": 4,
+      "away_score": 0
     }
   ]
 }
