@@ -32,9 +32,9 @@
     <div class="ph3 ph5-l center mw8">
       <h2 class="f3 fw6 dark-blue mb3">📅 Upcoming Games</h2>
       <div id="gc-scoreboard-widget-homepage"></div>
-      <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+      <script defer src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
       <script>
-        (function () {
+        document.addEventListener("DOMContentLoaded", function () {
           // Pass start=today and end=today+1 so the widget shows roughly the
           // next two days of upcoming games. `start`/`end` flow through the
           // SDK's undocumented `options` escape hatch as YYYY-MM-DD query
@@ -69,7 +69,7 @@
             });
             obs.observe(host, { childList: true, subtree: true });
           }
-        })();
+        });
       </script>
       <a href="/schedule/" class="f5 link dim dark-blue mt3 dib">View full schedule →</a>
     </div>

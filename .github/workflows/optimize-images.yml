@@ -46,9 +46,11 @@ jobs:
           for img in static/images/news/*.{jpg,jpeg,png}; do
             [ -f "$img" ] || continue
 
-            # Skip SVGs and already-small files (under 100KB)
+            # Skip SVGs and already-small files (under 50KB).
+            # Anything bigger than this almost always means a too-large
+            # source image was uploaded; recompress it in place.
             SIZE=$(stat --format=%s "$img")
-            if [ "$SIZE" -lt 102400 ]; then
+            if [ "$SIZE" -lt 51200 ]; then
               echo "Skipping $img (already ${SIZE} bytes)"
               continue
             fi

@@ -5,7 +5,7 @@ description: "2026 RBRL season predictions from the Commissioner — division st
 author: "Jeff Pierce"
 ---
 
-{{< article-image src="/images/news/2026-commissioners-picks.png" alt="The Commissioner's Picks 2026" >}}
+{{< article-image src="/images/news/2026-commissioners-picks.png" alt="The Commissioner's Picks 2026" intrinsic_width="333" height="500" >}}
 
 **2026 RBRL Season Predictions**
 

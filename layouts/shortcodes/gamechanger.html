@@ -8,17 +8,17 @@
 <div class="gamechanger-widget mv4" role="region" aria-label="Game Scores">
   <div id="{{ $element_id }}"></div>
   <noscript><p>Live game scores are available via the GameChanger widget. Please enable JavaScript to view scores.</p></noscript>
-  <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
+  <script defer src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
   <script>
-    window.GC.scoreboard.init({
-      target: "#{{ $element_id }}",
-      widgetId: "{{ $widget_id }}",
-      layout: "vertical",
-      maxVerticalGamesVisible: {{ $max_games }},
-    });
-    // GameChanger SDK injects an <iframe> without a title; observe the host
-    // and label it for screen readers once it appears.
-    (function () {
+    document.addEventListener("DOMContentLoaded", function () {
+      window.GC.scoreboard.init({
+        target: "#{{ $element_id }}",
+        widgetId: "{{ $widget_id }}",
+        layout: "vertical",
+        maxVerticalGamesVisible: {{ $max_games }},
+      });
+      // GameChanger SDK injects an <iframe> without a title; observe the host
+      // and label it for screen readers once it appears.
       var host = document.getElementById("{{ $element_id }}");
       if (!host || !("MutationObserver" in window)) return;
       var obs = new MutationObserver(function () {
@@ -29,6 +29,6 @@
         }
       });
       obs.observe(host, { childList: true, subtree: true });
-    })();
+    });
   </script>
 </div>

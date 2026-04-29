@@ -1,6 +1,12 @@
 {{/* Floated article image shortcode */}}
-{{/* Usage: {{< article-image src="/images/news/photo.jpg" alt="Description" >}} */}}
+{{/* Usage: {{< article-image src="/images/news/photo.jpg" alt="Description" width="250px" height="375" >}} */}}
+{{/* `width` is the CSS max-width (with units). `height` is the intrinsic */}}
+{{/* pixel height used to reserve space (no units). Both are optional. */}}
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
 {{ $width := .Get "width" | default "250px" }}
-<img src="{{ $src }}" alt="{{ $alt }}" class="article-image" style="float: left; max-width: {{ $width }}; margin: 0 1.5rem 1rem 0; border-radius: 6px;">
+{{ $heightAttr := "" }}
+{{ with .Get "height" }}{{ $heightAttr = printf ` height="%s"` . }}{{ end }}
+{{ $widthAttr := "" }}
+{{ with .Get "intrinsic_width" }}{{ $widthAttr = printf ` width="%s"` . }}{{ end }}
+<img src="{{ $src }}" alt="{{ $alt }}" class="article-image"{{ $widthAttr | safeHTMLAttr }}{{ $heightAttr | safeHTMLAttr }} style="float: left; max-width: {{ $width }}; margin: 0 1.5rem 1rem 0; border-radius: 6px;">
