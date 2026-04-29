@@ -24,29 +24,36 @@
   </section>
   {{ end }}
 
-  {{/* GameChanger Scoreboard */}}
-  <section class="w-100 bg-near-white pv4">
+  {{/* Recent Results (rendered from data/standings.json) */}}
+  {{ partial "recent-results.html" . }}
+
+  {{/* GameChanger Scoreboard — upcoming only */}}
+  <section class="w-100 pv4">
     <div class="ph3 ph5-l center mw8">
-      <h2 class="f3 fw6 dark-blue mb3">⚾ Scores & Schedule</h2>
+      <h2 class="f3 fw6 dark-blue mb3">📅 Upcoming Games</h2>
       <div id="gc-scoreboard-widget-homepage"></div>
       <script src="https://widgets.gc.com/static/js/sdk.v1.js"></script>
       <script>
         (function () {
-          // Show games starting from yesterday so recent results are visible
-          // alongside upcoming games. The widget's underlying API accepts a
-          // `start` query param (YYYY-MM-DD) that we pass through via the
-          // SDK's `options` escape hatch.
-          var yesterday = new Date();
-          yesterday.setDate(yesterday.getDate() - 1);
-          var start = yesterday.getFullYear() + "-" +
-            String(yesterday.getMonth() + 1).padStart(2, "0") + "-" +
-            String(yesterday.getDate()).padStart(2, "0");
+          // Pass start=today and end=today+1 so the widget shows roughly the
+          // next two days of upcoming games. `start`/`end` flow through the
+          // SDK's undocumented `options` escape hatch as YYYY-MM-DD query
+          // params; if `end` is ignored, maxHorizontalGamesVisible still caps
+          // the visible slot count.
+          function fmt(d) {
+            return d.getFullYear() + "-" +
+              String(d.getMonth() + 1).padStart(2, "0") + "-" +
+              String(d.getDate()).padStart(2, "0");
+          }
+          var today = new Date();
+          var tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
           window.GC.scoreboard.init({
             target: "#gc-scoreboard-widget-homepage",
             widgetId: "{{ site.Params.gamechanger.widget_id | default "65041549-7a93-400a-a9ee-d67d9a3f8c9e" }}",
-            layout: "vertical",
-            maxVerticalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
-            options: { start: start },
+            layout: "horizontal",
+            maxHorizontalGamesVisible: {{ site.Params.gamechanger.max_games | default "4" }},
+            options: { start: fmt(today), end: fmt(tomorrow) },
           });
         })();
       </script>

@@ -1,0 +1,90 @@
+{{/*
+  Recent Results
+  --------------
+  Renders the most recent results from data/standings.json (the `games` array).
+  Selection: walk newest-first, add whole days only, stop when we've shown 3
+  days OR the next day would push us past 6 games total.
+*/}}
+
+{{ $games := sort (hugo.Data.standings.games | default slice) "date" "desc" }}
+{{ if $games }}
+
+{{ $tz := "America/New_York" }}
+
+{{/* name -> logo lookup, flattened across both divisions */}}
+{{ $logos := dict }}
+{{ range hugo.Data.teams.american_league }}
+  {{ $logos = merge $logos (dict .name .logo) }}
+{{ end }}
+{{ range hugo.Data.teams.national_league }}
+  {{ $logos = merge $logos (dict .name .logo) }}
+{{ end }}
+
+{{/* Bucket games by local date, preserving descending order */}}
+{{ $days := slice }}
+{{ $byDay := dict }}
+{{ range $games }}
+  {{ $t := time.AsTime .date $tz }}
+  {{ $key := $t.Format "2006-01-02" }}
+  {{ if not (isset $byDay $key) }}
+    {{ $byDay = merge $byDay (dict $key (slice .)) }}
+    {{ $days = $days | append (dict "key" $key "time" $t) }}
+  {{ else }}
+    {{ $existing := index $byDay $key }}
+    {{ $byDay = merge $byDay (dict $key ($existing | append .)) }}
+  {{ end }}
+{{ end }}
+
+{{/* Pick up to 3 days, capped at 6 games. Stop on first day that wouldn't fit. */}}
+{{ $selected := slice }}
+{{ $count := 0 }}
+{{ $stop := false }}
+{{ range $days }}
+  {{ if not $stop }}
+    {{ $g := index $byDay .key }}
+    {{ $next := add $count (len $g) }}
+    {{ if and (lt (len $selected) 3) (le $next 6) }}
+      {{ $selected = $selected | append (dict "key" .key "time" .time "games" $g) }}
+      {{ $count = $next }}
+    {{ else }}
+      {{ $stop = true }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $selected }}
+<section class="w-100 bg-near-white pv4">
+  <div class="ph3 ph5-l center mw8">
+    <h2 class="f3 fw6 dark-blue mb3">⚾ Recent Results</h2>
+
+    <div class="recent-results-grid">
+      {{ range $selected }}
+        {{ $dateLabel := .time.Format "Mon, Jan 2" }}
+        {{ range .games }}
+          {{ $awayLogo := index $logos .away }}
+          {{ $homeLogo := index $logos .home }}
+          {{ $awayWin := gt .away_score .home_score }}
+          {{ $homeWin := gt .home_score .away_score }}
+          {{ $tie := eq .away_score .home_score }}
+          <div class="result-card bg-white br3 shadow-4 pa3">
+            <div class="result-date f7 mid-gray ttu tracked tc mb2">{{ $dateLabel }}{{ if $tie }} · Tie{{ end }}</div>
+            <div class="result-row {{ if $homeWin }}result-loser{{ end }}">
+              <img src="{{ $awayLogo }}" alt="{{ .away }} logo" class="result-logo" loading="lazy">
+              <span class="result-team">{{ .away }}</span>
+              <span class="result-score {{ if $awayWin }}result-winner{{ end }}">{{ .away_score }}</span>
+            </div>
+            <div class="result-row {{ if $awayWin }}result-loser{{ end }}">
+              <img src="{{ $homeLogo }}" alt="{{ .home }} logo" class="result-logo" loading="lazy">
+              <span class="result-team">{{ .home }}</span>
+              <span class="result-score {{ if $homeWin }}result-winner{{ end }}">{{ .home_score }}</span>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+    <a href="https://web.gc.com/organizations/fCGlFdY1Z4hj/schedule" target="_blank" rel="noopener noreferrer" class="f5 link dim dark-blue mt3 dib">View all results on GameChanger →</a>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
