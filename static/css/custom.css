@@ -200,6 +200,7 @@ footer button:focus-visible {
 .article-image {
   float: left;
   max-width: 250px;
+  height: auto;
   margin: 0 1.5rem 1rem 0;
   border-radius: 6px;
   shape-outside: margin-box;
