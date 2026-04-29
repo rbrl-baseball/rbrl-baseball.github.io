@@ -35,20 +35,12 @@
   {{ end }}
 {{ end }}
 
-{{/* Pick up to 3 days, capped at 6 games. Stop on first day that wouldn't fit. */}}
+{{/* Take the 3 most recent days that had games (no per-game cap). */}}
 {{ $selected := slice }}
-{{ $count := 0 }}
-{{ $stop := false }}
 {{ range $days }}
-  {{ if not $stop }}
+  {{ if lt (len $selected) 3 }}
     {{ $g := index $byDay .key }}
-    {{ $next := add $count (len $g) }}
-    {{ if and (lt (len $selected) 3) (le $next 6) }}
-      {{ $selected = $selected | append (dict "key" .key "time" .time "games" $g) }}
-      {{ $count = $next }}
-    {{ else }}
-      {{ $stop = true }}
-    {{ end }}
+    {{ $selected = $selected | append (dict "key" .key "time" .time "games" $g) }}
   {{ end }}
 {{ end }}
 
