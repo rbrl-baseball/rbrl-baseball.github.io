@@ -2,7 +2,10 @@ name: Update Standings
 
 on:
   schedule:
-    # Run daily at 6am ET (10:00 UTC) during the season (April–June)
+    # During the season (April–June), run twice daily:
+    #   9pm ET = 01:00 UTC next day (catches evening games)
+    #   6am ET = 10:00 UTC          (morning refresh / catches late entries)
+    - cron: "0 1 * 4-6 *"
     - cron: "0 10 * 4-6 *"
   workflow_dispatch:
 
