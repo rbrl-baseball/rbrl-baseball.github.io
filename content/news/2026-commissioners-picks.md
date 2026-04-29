@@ -1,13 +1,11 @@
 ---
-title: "The Commissioner's Picks are In"
+title: The Commissioner's Picks are In
 date: 2026-04-26
-description: "2026 RBRL season predictions from the Commissioner — division standings, championship match-ups, and World Series pick."
-author: "Jeff Pierce"
+description: 2026 RBRL season predictions from the Commissioner — division
+  standings, championship match-ups, and World Series pick.
+author: Jeff Pierce
 ---
-
 {{< article-image src="/images/news/2026-commissioners-picks.png" alt="The Commissioner's Picks 2026" intrinsic_width="333" height="500" >}}
-
-**2026 RBRL Season Predictions**
 
 ## American League
 
@@ -38,3 +36,4 @@ author: "Jeff Pierce"
 - **AL Championship:** Royals over the Angels
 - **NL Championship:** Pirates over the Phillies
 - **World Series:** Pirates over the Royals (first back-to-back since the 2016 Royals)
+
