@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Reading Babe Ruth'
 theme = 'ananke'
 copyright = 'Reading Babe Ruth'
+enableRobotsTXT = true
 
 [params]
   text_color = "dark-gray"
