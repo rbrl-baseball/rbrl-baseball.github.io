@@ -1,6 +1,6 @@
 ---
 title: "Sponsors"
-description: "Our generous sponsors"
+description: "Local Reading, MA businesses that sponsor Reading Babe Ruth Baseball League. Their support keeps registration affordable and our fields and equipment in top shape."
 featured_image: ""
 type: "page"
 layout: "sponsors"

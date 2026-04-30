@@ -1,6 +1,6 @@
 ---
 title: "Schedule"
-description: "RBRL game schedule"
+description: "Live game schedule and scores for Reading Babe Ruth Baseball League — youth baseball in Reading, MA. Powered by GameChanger, updated in real time."
 featured_image: ""
 type: "page"
 menu: ""

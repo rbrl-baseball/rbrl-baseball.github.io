@@ -1,6 +1,6 @@
 ---
 title: League History
-description: History of Reading Babe Ruth League
+description: "50+ years of Reading Babe Ruth Baseball League history — World Series champions, all-stars, and the families who built youth baseball in Reading, MA since 1975."
 type: page
 ---
 Reading Babe Ruth League has a proud tradition of youth baseball, having recently celebrated its fiftieth season. We're thrilled that many of our managers and umpires are former players who grew up in the league — a testament to the lasting impact Reading Babe Ruth has on the young athletes who play here.

@@ -1,6 +1,6 @@
 ---
 title: Teams
-description: RBRL teams by division
+description: "Meet the 10 teams of Reading Babe Ruth Baseball League — five American League, five National League — competing each spring in Reading, Massachusetts."
 type: page
 layout: teams
 ---
