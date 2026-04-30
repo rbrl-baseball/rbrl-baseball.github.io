@@ -40,12 +40,12 @@
       "name": "Astros",
       "division": "american_league",
       "w": 0,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 0,
       "division_points": 0,
-      "runs_scored": 1,
-      "runs_allowed": 21,
+      "runs_scored": 5,
+      "runs_allowed": 26,
       "division_runs_allowed": 10
     },
     {
@@ -62,6 +62,18 @@
     }
   ],
   "national_league": [
+    {
+      "name": "Cubs",
+      "division": "national_league",
+      "w": 2,
+      "l": 1,
+      "t": 0,
+      "points": 4,
+      "division_points": 2,
+      "runs_scored": 16,
+      "runs_allowed": 21,
+      "division_runs_allowed": 6
+    },
     {
       "name": "Marlins",
       "division": "national_league",
@@ -85,18 +97,6 @@
       "runs_scored": 19,
       "runs_allowed": 5,
       "division_runs_allowed": 0
-    },
-    {
-      "name": "Cubs",
-      "division": "national_league",
-      "w": 1,
-      "l": 1,
-      "t": 0,
-      "points": 2,
-      "division_points": 2,
-      "runs_scored": 11,
-      "runs_allowed": 17,
-      "division_runs_allowed": 6
     },
     {
       "name": "Pirates",
@@ -193,6 +193,13 @@
       "away": "Angels",
       "home_score": 4,
       "away_score": 0
+    },
+    {
+      "date": "2026-04-29T21:45:00.000Z",
+      "home": "Cubs",
+      "away": "Astros",
+      "home_score": 5,
+      "away_score": 4
     }
   ]
 }
