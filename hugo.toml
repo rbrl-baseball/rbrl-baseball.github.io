@@ -5,6 +5,10 @@ theme = 'ananke'
 copyright = 'Reading Babe Ruth'
 enableRobotsTXT = true
 
+# Disable default tags/categories taxonomies — we don't use them and
+# their empty index pages were polluting the sitemap.
+disableKinds = ['taxonomy', 'term']
+
 [params]
   text_color = "dark-gray"
   background_color_class = "bg-dark-blue"
