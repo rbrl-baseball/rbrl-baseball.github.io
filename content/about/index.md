@@ -1,5 +1,5 @@
 ---
-title: "About Reading Babe Ruth"
+title: "About"
 description: "About Reading Babe Ruth Baseball League — Massachusetts' largest Babe Ruth program with ~150 players and 10 teams in two divisions for ages 13–15."
 featured_image: ""
 type: "page"
