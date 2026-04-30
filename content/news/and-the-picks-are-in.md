@@ -3,9 +3,10 @@ title: "And the Picks are In..."
 date: 2025-04-26
 description: "And the Picks are In..."
 author: "Jeff Pierce"
+images: ["/images/news/and-the-picks-are-in.jpg"]
 ---
 
-{{< article-image src="/images/news/and-the-picks-are-in.jpg" alt="And the Picks are In..." >}}
+{{< article-image src="/images/news/and-the-picks-are-in.jpg" alt="Two RBRL board members pose in the dugout at JetBlue Park during a Red Sox spring training visit." >}}
 
 **2025 Spring RBRL Predictions**
 

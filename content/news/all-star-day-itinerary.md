@@ -3,9 +3,10 @@ title: "All Star Day Itinerary"
 date: 2019-05-23
 description: "All Star Day Itinerary"
 author: "Jeff Pierce"
+images: ["/images/news/all-star-day-itinerary.jpg"]
 ---
 
-{{< article-image src="/images/news/all-star-day-itinerary.jpg" alt="All Star Day Itinerary" >}}
+{{< article-image src="/images/news/all-star-day-itinerary.jpg" alt="Welcome sign at Pete Moscariello Ballpark — Home of \"Newt\" Morton Memorial Field — in Reading, MA." >}}
 
 Hello All:
 

@@ -55,7 +55,7 @@
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
   },
-  "image": "{{ "images/rbrl-logo.png" | absURL }}"
+  "image": "{{ with .Params.images }}{{ index . 0 | absURL }}{{ else }}{{ "images/rbrl-logo.png" | absURL }}{{ end }}"
 }
 </script>
 {{ end }}

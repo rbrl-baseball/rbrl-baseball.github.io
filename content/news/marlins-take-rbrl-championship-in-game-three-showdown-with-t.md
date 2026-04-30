@@ -3,9 +3,10 @@ title: "Marlins take RBRL Championship in Game Three Showdown with the Mariners"
 date: 2019-06-17
 description: "Marlins take RBRL Championship in Game Three Showdown with the Mariners"
 author: "Jeff Pierce"
+images: ["/images/news/marlins-take-rbrl-championship-in-game-three-showdown-with-t.jpg"]
 ---
 
-{{< article-image src="/images/news/marlins-take-rbrl-championship-in-game-three-showdown-with-t.jpg" alt="Marlins take RBRL Championship in Game Three Showdown with the Mariners" >}}
+{{< article-image src="/images/news/marlins-take-rbrl-championship-in-game-three-showdown-with-t.jpg" alt="Reading Marlins players and coaches pose with their championship trophies after defeating the Mariners in Game 3 of the RBRL World Series." >}}
 
 **Mariners vs. Marlins Game Three World Series 6-14-19, at Symonds Field**
 

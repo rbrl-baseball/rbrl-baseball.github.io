@@ -3,9 +3,10 @@ title: "Pirates take Game One of 2023 World Series"
 date: 2023-06-19
 description: "Pirates take Game One of 2023 World Series"
 author: "Jeff Pierce"
+images: ["/images/news/pirates-take-game-one-of-2023-world-series.jpg"]
 ---
 
-{{< article-image src="/images/news/pirates-take-game-one-of-2023-world-series.jpg" alt="Pirates take Game One of 2023 World Series" >}}
+{{< article-image src="/images/news/pirates-take-game-one-of-2023-world-series.jpg" alt="A Reading Pirates pitcher in gold and black leg-kicks during Game 1 of the 2023 RBRL World Series at Pete Moscariello Ballpark." >}}
 
 **Royals vs. Pirates 6-12-23 at Moscariello Ballpark**
 

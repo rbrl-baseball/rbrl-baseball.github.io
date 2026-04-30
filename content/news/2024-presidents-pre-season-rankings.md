@@ -5,7 +5,7 @@ description: "2024 Presidents Pre-Season Rankings"
 author: "Jeff Pierce"
 ---
 
-{{< article-image src="/images/news/2024-presidents-pre-season-rankings.jpg" alt="2024 Presidents Pre-Season Rankings" >}}
+{{< article-image src="/images/news/2024-presidents-pre-season-rankings.jpg" alt="Reading Babe Ruth League 50th anniversary logo featuring a batter silhouette inside a baseball, with \"RBRL Est. 1975\" beneath." >}}
 
 **Presidents Pre-Season Predictions**
 

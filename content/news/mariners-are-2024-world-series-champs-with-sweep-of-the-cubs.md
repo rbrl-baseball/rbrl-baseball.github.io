@@ -3,9 +3,10 @@ title: "Mariners are 2024 World Series Champs with sweep of the Cubs"
 date: 2025-03-08
 description: "Mariners are 2024 World Series Champs with sweep of the Cubs"
 author: "Jeff Pierce"
+images: ["/images/news/mariners-are-2024-world-series-champs-with-sweep-of-the-cubs.jpg"]
 ---
 
-{{< article-image src="/images/news/mariners-are-2024-world-series-champs-with-sweep-of-the-cubs.jpg" alt="Mariners are 2024 World Series Champs with sweep of the Cubs" >}}
+{{< article-image src="/images/news/mariners-are-2024-world-series-champs-with-sweep-of-the-cubs.jpg" alt="Reading Mariners players in navy uniforms celebrate on the field after the final out of the 2024 RBRL World Series." >}}
 
 **GAME TWO RBRL WORLD SERIES 6-12-24  CUBS VS MARINERS** 
 

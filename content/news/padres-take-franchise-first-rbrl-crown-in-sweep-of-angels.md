@@ -3,9 +3,10 @@ title: "Padres Take Franchise First RBRL Crown in Sweep of Angels"
 date: 2021-06-23
 description: "Padres Take Franchise First RBRL Crown in Sweep of Angels"
 author: "Jeff Pierce"
+images: ["/images/news/padres-take-franchise-first-rbrl-crown-in-sweep-of-angels.jpg"]
 ---
 
-{{< article-image src="/images/news/padres-take-franchise-first-rbrl-crown-in-sweep-of-angels.jpg" alt="Padres Take Franchise First RBRL Crown" >}}
+{{< article-image src="/images/news/padres-take-franchise-first-rbrl-crown-in-sweep-of-angels.jpg" alt="The Reading Padres pose for a team photo in front of the Reading Rockets dugout after sweeping the Angels for the franchise's first RBRL championship." >}}
 
 **Angels vs. Padres 6-18-21 at Morton Field**
 

@@ -4,8 +4,9 @@ date: 2026-04-26
 description: 2026 RBRL season predictions from the Commissioner — division
   standings, championship match-ups, and World Series pick.
 author: Jeff Pierce
+images: ["/images/news/2026-commissioners-picks.png"]
 ---
-{{< article-image src="/images/news/2026-commissioners-picks.png" alt="The Commissioner's Picks 2026" intrinsic_width="333" height="500" >}}
+{{< article-image src="/images/news/2026-commissioners-picks.png" alt="Stylized poster: smiling Commissioner holding a Game Plan clipboard listing Pitching, Timely Hitting, Commitment, and Coaching, with a 2026 badge below." intrinsic_width="333" height="500" >}}
 
 ## American League
 

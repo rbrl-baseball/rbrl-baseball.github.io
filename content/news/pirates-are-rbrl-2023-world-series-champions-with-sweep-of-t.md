@@ -3,9 +3,10 @@ title: "Pirates are RBRL 2023 World Series Champions with Sweep of the Royals"
 date: 2023-06-20
 description: "Pirates are RBRL 2023 World Series Champions with Sweep of the Royals"
 author: "Jeff Pierce"
+images: ["/images/news/pirates-are-rbrl-2023-world-series-champions-with-sweep-of-t.jpg"]
 ---
 
-{{< article-image src="/images/news/pirates-are-rbrl-2023-world-series-champions-with-sweep-of-t.jpg" alt="Pirates are RBRL 2023 World Series Champions with Sweep of the Royals" >}}
+{{< article-image src="/images/news/pirates-are-rbrl-2023-world-series-champions-with-sweep-of-t.jpg" alt="Reading Pirates players, coaches, and families gather under the Pete Moscariello Ballpark scoreboard with their championship trophies and a Jolly Roger flag after sweeping the Royals." >}}
 
 **Royals vs. Pirates 6-13-23 at Moscariello Ballpark**
 

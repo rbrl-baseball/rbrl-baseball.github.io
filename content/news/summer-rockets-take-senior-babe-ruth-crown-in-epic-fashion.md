@@ -3,9 +3,10 @@ title: "Summer Rockets take Senior Babe Ruth Crown in Epic Fashion"
 date: 2019-08-18
 description: "Summer Rockets take Senior Babe Ruth Crown in Epic Fashion"
 author: "Jeff Pierce"
+images: ["/images/news/summer-rockets-take-senior-babe-ruth-crown-in-epic-fashion.jpg"]
 ---
 
-{{< article-image src="/images/news/summer-rockets-take-senior-babe-ruth-crown-in-epic-fashion.jpg" alt="Summer Rockets take Senior Babe Ruth Crown in Epic Fashion" >}}
+{{< article-image src="/images/news/summer-rockets-take-senior-babe-ruth-crown-in-epic-fashion.jpg" alt="The Reading Summer Rockets pose for a team photo at dusk after winning the Senior Babe Ruth tournament." >}}
 
 The RBRL Summer Rockets won the first outright MSBRL title in RBRL  history with an epic run out of the losers bracket.
 

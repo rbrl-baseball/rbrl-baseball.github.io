@@ -5,7 +5,7 @@ description: "2024 Spring Registration is Closed"
 author: "Jeff Pierce"
 ---
 
-{{< article-image src="/images/news/2024-spring-registration-is-closed.jpg" alt="2024 Spring Registration is Closed" >}}
+{{< article-image src="/images/news/2024-spring-registration-is-closed.jpg" alt="Reading Babe Ruth League logo: a batter silhouette inside a baseball, with \"RBRL Est. 1975\" beneath." >}}
 
 **Click link to register for our Spring Season**
 
