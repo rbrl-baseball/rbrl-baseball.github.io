@@ -1,6 +1,65 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="/css/custom.css">
 
+{{/* Structured data — SportsOrganization on homepage, NewsArticle on news posts */}}
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "Reading Babe Ruth Baseball League",
+  "alternateName": "RBRL",
+  "url": "{{ site.BaseURL }}",
+  "logo": "{{ "images/rbrl-logo.png" | absURL }}",
+  "description": "{{ site.Params.description }}",
+  {{ with site.Params.org_founding_year }}"foundingDate": "{{ . }}",
+  {{ end }}"sport": "Baseball",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ site.Params.org_address_locality }}",
+    "addressRegion": "{{ site.Params.org_address_region }}",
+    "addressCountry": "{{ site.Params.org_address_country }}"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "{{ site.Params.org_area_served }}"
+  },
+  "sameAs": [
+    {{ with site.Params.social.facebook }}"https://www.facebook.com/{{ . }}/"{{ end }}{{ if and site.Params.social.facebook site.Params.social.twitter }},
+    {{ end }}{{ with site.Params.social.twitter }}"https://x.com/{{ . }}"{{ end }}
+  ]
+}
+</script>
+{{ else if and .IsPage (eq .Section "news") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": {{ .Title | jsonify | safeJS }},
+  "description": {{ (.Description | default .Summary) | plainify | jsonify | safeJS }},
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  {{ with .Params.author }}"author": {
+    "@type": "Person",
+    "name": {{ . | jsonify | safeJS }}
+  },
+  {{ end }}"publisher": {
+    "@type": "Organization",
+    "name": "Reading Babe Ruth Baseball League",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ "images/rbrl-logo.png" | absURL }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "image": "{{ "images/rbrl-logo.png" | absURL }}"
+}
+</script>
+{{ end }}
+
 <!-- Hamburger menu -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {

@@ -10,9 +10,21 @@ enableRobotsTXT = true
   background_color_class = "bg-dark-blue"
   favicon = "/images/rbrl-logo.png"
   site_logo = "/images/rbrl-logo.png"
-  description = "Reading Babe Ruth — Youth baseball for ages 13–15 in Reading, Massachusetts"
+  description = "Reading Babe Ruth Baseball League — community youth baseball for ages 13–15 in Reading, Massachusetts. Schedule, standings, news, history, and registration info."
   mainSections = ["news"]
   recent_posts_number = 1
+  # Default share image used by Hugo's internal opengraph.html / twitter_cards.html
+  images = ["/images/rbrl-logo.png"]
+  # Org metadata used by SportsOrganization JSON-LD in head-additions.html
+  org_address_locality = "Reading"
+  org_address_region = "MA"
+  org_address_country = "US"
+  org_founding_year = "1975"
+  org_area_served = "Reading, Massachusetts"
+
+  [params.social]
+    twitter = "jpierce_rbrl"
+    facebook = "readingbaberuth"
 
   [params.gamechanger]
     widget_id = "65041549-7a93-400a-a9ee-d67d9a3f8c9e"
