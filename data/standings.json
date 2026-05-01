@@ -3,13 +3,13 @@
     {
       "name": "Royals",
       "division": "american_league",
-      "w": 2,
+      "w": 3,
       "l": 0,
       "t": 0,
-      "points": 4,
+      "points": 6,
       "division_points": 2,
-      "runs_scored": 21,
-      "runs_allowed": 4,
+      "runs_scored": 34,
+      "runs_allowed": 9,
       "division_runs_allowed": 0
     },
     {
@@ -102,12 +102,12 @@
       "name": "Pirates",
       "division": "national_league",
       "w": 1,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 12,
-      "runs_allowed": 11,
+      "runs_scored": 17,
+      "runs_allowed": 24,
       "division_runs_allowed": 11
     },
     {
@@ -200,6 +200,13 @@
       "away": "Astros",
       "home_score": 5,
       "away_score": 4
+    },
+    {
+      "date": "2026-04-30T21:45:00.000Z",
+      "home": "Pirates",
+      "away": "Royals",
+      "home_score": 5,
+      "away_score": 13
     }
   ]
 }
