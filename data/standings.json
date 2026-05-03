@@ -3,38 +3,26 @@
     {
       "name": "Royals",
       "division": "american_league",
-      "w": 3,
+      "w": 4,
       "l": 0,
       "t": 0,
-      "points": 6,
-      "division_points": 2,
-      "runs_scored": 34,
-      "runs_allowed": 9,
-      "division_runs_allowed": 0
+      "points": 8,
+      "division_points": 4,
+      "runs_scored": 45,
+      "runs_allowed": 11,
+      "division_runs_allowed": 2
     },
     {
       "name": "Mariners",
       "division": "american_league",
-      "w": 1,
+      "w": 2,
       "l": 1,
       "t": 0,
-      "points": 2,
+      "points": 4,
       "division_points": 2,
-      "runs_scored": 12,
-      "runs_allowed": 13,
+      "runs_scored": 19,
+      "runs_allowed": 16,
       "division_runs_allowed": 7
-    },
-    {
-      "name": "Athletics",
-      "division": "american_league",
-      "w": 0,
-      "l": 2,
-      "t": 0,
-      "points": 0,
-      "division_points": 0,
-      "runs_scored": 6,
-      "runs_allowed": 24,
-      "division_runs_allowed": 0
     },
     {
       "name": "Astros",
@@ -52,63 +40,75 @@
       "name": "Angels",
       "division": "american_league",
       "w": 0,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 0,
       "division_points": 0,
-      "runs_scored": 7,
-      "runs_allowed": 15,
+      "runs_scored": 13,
+      "runs_allowed": 31,
+      "division_runs_allowed": 11
+    },
+    {
+      "name": "Athletics",
+      "division": "american_league",
+      "w": 0,
+      "l": 3,
+      "t": 0,
+      "points": 0,
+      "division_points": 0,
+      "runs_scored": 8,
+      "runs_allowed": 35,
       "division_runs_allowed": 11
     }
   ],
   "national_league": [
     {
-      "name": "Cubs",
-      "division": "national_league",
-      "w": 2,
-      "l": 1,
-      "t": 0,
-      "points": 4,
-      "division_points": 2,
-      "runs_scored": 16,
-      "runs_allowed": 21,
-      "division_runs_allowed": 6
-    },
-    {
       "name": "Marlins",
       "division": "national_league",
-      "w": 2,
+      "w": 3,
       "l": 0,
       "t": 0,
-      "points": 4,
-      "division_points": 0,
-      "runs_scored": 22,
-      "runs_allowed": 3,
-      "division_runs_allowed": 0
+      "points": 6,
+      "division_points": 2,
+      "runs_scored": 27,
+      "runs_allowed": 5,
+      "division_runs_allowed": 2
     },
     {
       "name": "Phillies",
       "division": "national_league",
-      "w": 2,
+      "w": 3,
       "l": 0,
       "t": 0,
-      "points": 4,
+      "points": 6,
       "division_points": 0,
-      "runs_scored": 19,
-      "runs_allowed": 5,
+      "runs_scored": 35,
+      "runs_allowed": 11,
       "division_runs_allowed": 0
+    },
+    {
+      "name": "Cubs",
+      "division": "national_league",
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "points": 4,
+      "division_points": 2,
+      "runs_scored": 19,
+      "runs_allowed": 28,
+      "division_runs_allowed": 6
     },
     {
       "name": "Pirates",
       "division": "national_league",
       "w": 1,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 17,
-      "runs_allowed": 24,
-      "division_runs_allowed": 11
+      "runs_scored": 19,
+      "runs_allowed": 29,
+      "division_runs_allowed": 16
     },
     {
       "name": "Padres",
@@ -207,6 +207,34 @@
       "away": "Royals",
       "home_score": 5,
       "away_score": 13
+    },
+    {
+      "date": "2026-05-02T16:30:00.000Z",
+      "home": "Cubs",
+      "away": "Mariners",
+      "home_score": 3,
+      "away_score": 7
+    },
+    {
+      "date": "2026-05-02T18:45:00.000Z",
+      "home": "Angels",
+      "away": "Phillies",
+      "home_score": 6,
+      "away_score": 16
+    },
+    {
+      "date": "2026-05-02T21:00:00.000Z",
+      "home": "Athletics",
+      "away": "Royals",
+      "home_score": 2,
+      "away_score": 11
+    },
+    {
+      "date": "2026-05-02T21:00:00.000Z",
+      "home": "Marlins",
+      "away": "Pirates",
+      "home_score": 5,
+      "away_score": 2
     }
   ]
 }
