@@ -590,6 +590,103 @@ body > footer {
   }
 }
 
+/* ============================================
+   Rules Page Sections
+   ============================================ */
+.page-rules .nested-copy-line-height h2 {
+  border-left: 4px solid var(--rbrl-blue);
+  padding-left: 0.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--rbrl-blue);
+}
+
+.page-rules .nested-copy-line-height h2:first-child {
+  margin-top: 0;
+}
+
+.page-rules .nested-copy-line-height hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2rem 0;
+}
+
+/* ============================================
+   Bat Certification Cards (Rules page)
+   ============================================ */
+.bat-cert-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+
+.bat-cert-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  padding: 1.25rem 1rem 1rem;
+  border-radius: 10px;
+  border: 3px solid;
+  text-align: center;
+}
+
+.bat-cert-approved {
+  border-color: #2e7d32;
+  background-color: #f1f8f1;
+}
+
+.bat-cert-rejected {
+  border-color: var(--rbrl-red);
+  background-color: #fdf0f0;
+}
+
+.bat-cert-img {
+  width: 140px;
+  height: 56px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  margin-bottom: 0.75rem;
+}
+
+.bat-cert-rejected .bat-cert-img {
+  opacity: 0.3;
+}
+
+.bat-cert-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: var(--rbrl-red);
+  line-height: 1;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.bat-cert-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bat-cert-approved .bat-cert-status {
+  color: #2e7d32;
+}
+
+.bat-cert-rejected .bat-cert-status {
+  color: var(--rbrl-red);
+}
+
 /* Flex helpers for older Tachyons */
 .flex {
   display: flex;

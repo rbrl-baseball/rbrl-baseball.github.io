@@ -135,6 +135,33 @@ content:
             label: Content
             type: rich-text
 
+      - name: rules
+        label: Rules
+        type: file
+        path: content/rules/index.md
+        format: yaml-frontmatter
+        fields:
+          - name: title
+            label: Title
+            type: string
+            hidden: true
+          - name: description
+            label: Description
+            type: string
+            hidden: true
+          - name: featured_image
+            type: string
+            hidden: true
+          - name: type
+            type: string
+            hidden: true
+          - name: menu
+            type: string
+            hidden: true
+          - name: body
+            label: Content
+            type: rich-text
+
       - name: teams-page
         label: Teams
         type: file
