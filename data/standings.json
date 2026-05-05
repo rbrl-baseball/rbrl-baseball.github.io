@@ -4,12 +4,12 @@
       "name": "Royals",
       "division": "american_league",
       "w": 4,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 8,
       "division_points": 4,
-      "runs_scored": 45,
-      "runs_allowed": 11,
+      "runs_scored": 50,
+      "runs_allowed": 18,
       "division_runs_allowed": 2
     },
     {
@@ -27,26 +27,26 @@
     {
       "name": "Astros",
       "division": "american_league",
-      "w": 1,
+      "w": 2,
       "l": 3,
       "t": 0,
-      "points": 2,
-      "division_points": 0,
-      "runs_scored": 15,
-      "runs_allowed": 34,
-      "division_runs_allowed": 10
+      "points": 4,
+      "division_points": 2,
+      "runs_scored": 23,
+      "runs_allowed": 41,
+      "division_runs_allowed": 17
     },
     {
       "name": "Athletics",
       "division": "american_league",
       "w": 0,
-      "l": 3,
+      "l": 4,
       "t": 0,
       "points": 0,
       "division_points": 0,
-      "runs_scored": 8,
-      "runs_allowed": 35,
-      "division_runs_allowed": 11
+      "runs_scored": 15,
+      "runs_allowed": 43,
+      "division_runs_allowed": 19
     },
     {
       "name": "Angels",
@@ -99,6 +99,18 @@
       "division_runs_allowed": 6
     },
     {
+      "name": "Padres",
+      "division": "national_league",
+      "w": 2,
+      "l": 2,
+      "t": 0,
+      "points": 4,
+      "division_points": 0,
+      "runs_scored": 23,
+      "runs_allowed": 21,
+      "division_runs_allowed": 6
+    },
+    {
       "name": "Pirates",
       "division": "national_league",
       "w": 1,
@@ -109,18 +121,6 @@
       "runs_scored": 19,
       "runs_allowed": 29,
       "division_runs_allowed": 16
-    },
-    {
-      "name": "Padres",
-      "division": "national_league",
-      "w": 1,
-      "l": 2,
-      "t": 0,
-      "points": 2,
-      "division_points": 0,
-      "runs_scored": 16,
-      "runs_allowed": 16,
-      "division_runs_allowed": 6
     }
   ],
   "games": [
@@ -256,6 +256,20 @@
       "away": "Mariners",
       "home_score": 7,
       "away_score": 9
+    },
+    {
+      "date": "2026-05-04T21:45:00.000Z",
+      "home": "Padres",
+      "away": "Royals",
+      "home_score": 7,
+      "away_score": 5
+    },
+    {
+      "date": "2026-05-04T21:45:00.000Z",
+      "home": "Astros",
+      "away": "Athletics",
+      "home_score": 8,
+      "away_score": 7
     }
   ]
 }
