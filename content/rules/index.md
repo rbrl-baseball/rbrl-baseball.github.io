@@ -64,7 +64,7 @@ RBRL uses an innings-based pitching limit system rather than a pitch count. A pl
 
 Players in 9th grade or above who are members of a high school baseball team are limited to 6 innings per week and a maximum of 2 innings per appearance. This restriction remains in effect even after the high school season ends and is intended to ensure that league games are not decided solely by teams with the strongest high school pitchers.
 
-Many coaches also refer to [Pitch Smart](https://www.mlb.com/pitch-smart) guidelines from USA Baseball and MLB as a supplemental resource for protecting young arms.
+Many coaches also refer to [Pitch Smart](https://www.mlb.com/pitch-smart/pitching-guidelines) guidelines from USA Baseball and MLB as a supplemental resource for protecting young arms.
 
 ---
 
