@@ -40,7 +40,7 @@ All bats used in RBRL games must bear either a BBCOR or USA Baseball certificati
 
 ## Call-Ups
 
-If a team cannot field nine players for a game, the manager must seek call-ups from other teams. Call-up players must be league age 12 or 13 and may not pitch for the team they are called up to. Exceptions to the age restriction may be granted in rare cases where a team is unable to find a catcher.
+If a team cannot field nine players for a game, the manager must seek call-ups from other teams. Call-up players must be league age 12 or 13, must bat at the bottom of the order, and may not pitch for the team they are called up to. Exceptions to the age restriction may be granted in rare cases where a team is unable to find a catcher.
 
 The manager of the team receiving a call-up should provide a spare jersey and hat.
 
