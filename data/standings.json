@@ -87,16 +87,28 @@
       "division_runs_allowed": 9
     },
     {
+      "name": "Pirates",
+      "division": "national_league",
+      "w": 2,
+      "l": 3,
+      "t": 0,
+      "points": 4,
+      "division_points": 4,
+      "runs_scored": 32,
+      "runs_allowed": 32,
+      "division_runs_allowed": 19
+    },
+    {
       "name": "Cubs",
       "division": "national_league",
       "w": 2,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 4,
       "division_points": 2,
-      "runs_scored": 19,
-      "runs_allowed": 28,
-      "division_runs_allowed": 6
+      "runs_scored": 22,
+      "runs_allowed": 41,
+      "division_runs_allowed": 19
     },
     {
       "name": "Padres",
@@ -109,18 +121,6 @@
       "runs_scored": 23,
       "runs_allowed": 21,
       "division_runs_allowed": 6
-    },
-    {
-      "name": "Pirates",
-      "division": "national_league",
-      "w": 1,
-      "l": 3,
-      "t": 0,
-      "points": 2,
-      "division_points": 2,
-      "runs_scored": 19,
-      "runs_allowed": 29,
-      "division_runs_allowed": 16
     }
   ],
   "games": [
@@ -270,6 +270,13 @@
       "away": "Athletics",
       "home_score": 8,
       "away_score": 7
+    },
+    {
+      "date": "2026-05-05T21:45:00.000Z",
+      "home": "Pirates",
+      "away": "Cubs",
+      "home_score": 13,
+      "away_score": 3
     }
   ]
 }
