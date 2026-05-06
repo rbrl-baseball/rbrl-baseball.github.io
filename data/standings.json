@@ -147,17 +147,17 @@
     },
     {
       "date": "2026-04-25T21:00:00.000Z",
-      "home": "Marlins",
-      "away": "Astros",
-      "home_score": 11,
-      "away_score": 1
-    },
-    {
-      "date": "2026-04-25T21:00:00.000Z",
       "home": "Royals",
       "away": "Cubs",
       "home_score": 11,
       "away_score": 4
+    },
+    {
+      "date": "2026-04-25T21:00:00.000Z",
+      "home": "Marlins",
+      "away": "Astros",
+      "home_score": 11,
+      "away_score": 1
     },
     {
       "date": "2026-04-26T21:00:00.000Z",
@@ -245,16 +245,16 @@
     },
     {
       "date": "2026-05-03T21:00:00.000Z",
-      "home": "Phillies",
-      "away": "Marlins",
-      "home_score": 4,
+      "home": "Angels",
+      "away": "Mariners",
+      "home_score": 7,
       "away_score": 9
     },
     {
       "date": "2026-05-03T21:00:00.000Z",
-      "home": "Angels",
-      "away": "Mariners",
-      "home_score": 7,
+      "home": "Phillies",
+      "away": "Marlins",
+      "home_score": 4,
       "away_score": 9
     },
     {
