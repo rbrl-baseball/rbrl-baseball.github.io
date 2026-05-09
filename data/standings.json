@@ -15,13 +15,13 @@
     {
       "name": "Mariners",
       "division": "american_league",
-      "w": 3,
+      "w": 4,
       "l": 1,
       "t": 0,
-      "points": 6,
+      "points": 8,
       "division_points": 4,
-      "runs_scored": 28,
-      "runs_allowed": 23,
+      "runs_scored": 35,
+      "runs_allowed": 25,
       "division_runs_allowed": 14
     },
     {
@@ -114,12 +114,12 @@
       "name": "Padres",
       "division": "national_league",
       "w": 2,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 4,
       "division_points": 0,
-      "runs_scored": 23,
-      "runs_allowed": 21,
+      "runs_scored": 25,
+      "runs_allowed": 28,
       "division_runs_allowed": 6
     }
   ],
@@ -291,6 +291,13 @@
       "away": "Astros",
       "home_score": 9,
       "away_score": 4
+    },
+    {
+      "date": "2026-05-08T21:45:00.000Z",
+      "home": "Mariners",
+      "away": "Padres",
+      "home_score": 7,
+      "away_score": 2
     }
   ]
 }
