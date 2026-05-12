@@ -37,6 +37,18 @@
       "division_runs_allowed": 17
     },
     {
+      "name": "Angels",
+      "division": "american_league",
+      "w": 1,
+      "l": 5,
+      "t": 0,
+      "points": 2,
+      "division_points": 0,
+      "runs_scored": 39,
+      "runs_allowed": 54,
+      "division_runs_allowed": 20
+    },
+    {
       "name": "Athletics",
       "division": "american_league",
       "w": 0,
@@ -47,18 +59,6 @@
       "runs_scored": 15,
       "runs_allowed": 43,
       "division_runs_allowed": 19
-    },
-    {
-      "name": "Angels",
-      "division": "american_league",
-      "w": 0,
-      "l": 5,
-      "t": 0,
-      "points": 0,
-      "division_points": 0,
-      "runs_scored": 27,
-      "runs_allowed": 52,
-      "division_runs_allowed": 20
     }
   ],
   "national_league": [
@@ -102,12 +102,12 @@
       "name": "Cubs",
       "division": "national_league",
       "w": 2,
-      "l": 3,
+      "l": 4,
       "t": 0,
       "points": 4,
       "division_points": 2,
-      "runs_scored": 22,
-      "runs_allowed": 41,
+      "runs_scored": 24,
+      "runs_allowed": 53,
       "division_runs_allowed": 19
     },
     {
@@ -297,6 +297,13 @@
       "home": "Mariners",
       "away": "Padres",
       "home_score": 7,
+      "away_score": 2
+    },
+    {
+      "date": "2026-05-11T21:45:00.000Z",
+      "home": "Angels",
+      "away": "Cubs",
+      "home_score": 12,
       "away_score": 2
     }
   ]
