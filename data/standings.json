@@ -4,12 +4,12 @@
       "name": "Royals",
       "division": "american_league",
       "w": 4,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 8,
       "division_points": 4,
-      "runs_scored": 50,
-      "runs_allowed": 18,
+      "runs_scored": 52,
+      "runs_allowed": 23,
       "division_runs_allowed": 2
     },
     {
@@ -66,25 +66,37 @@
       "name": "Marlins",
       "division": "national_league",
       "w": 5,
-      "l": 0,
+      "l": 1,
       "t": 0,
       "points": 10,
       "division_points": 4,
-      "runs_scored": 48,
-      "runs_allowed": 16,
-      "division_runs_allowed": 6
+      "runs_scored": 52,
+      "runs_allowed": 21,
+      "division_runs_allowed": 11
     },
     {
       "name": "Phillies",
       "division": "national_league",
-      "w": 4,
+      "w": 5,
       "l": 1,
       "t": 0,
-      "points": 8,
+      "points": 10,
       "division_points": 0,
-      "runs_scored": 48,
-      "runs_allowed": 24,
+      "runs_scored": 53,
+      "runs_allowed": 26,
       "division_runs_allowed": 9
+    },
+    {
+      "name": "Padres",
+      "division": "national_league",
+      "w": 3,
+      "l": 3,
+      "t": 0,
+      "points": 6,
+      "division_points": 2,
+      "runs_scored": 30,
+      "runs_allowed": 32,
+      "division_runs_allowed": 10
     },
     {
       "name": "Pirates",
@@ -109,18 +121,6 @@
       "runs_scored": 24,
       "runs_allowed": 53,
       "division_runs_allowed": 19
-    },
-    {
-      "name": "Padres",
-      "division": "national_league",
-      "w": 2,
-      "l": 3,
-      "t": 0,
-      "points": 4,
-      "division_points": 0,
-      "runs_scored": 25,
-      "runs_allowed": 28,
-      "division_runs_allowed": 6
     }
   ],
   "games": [
@@ -305,6 +305,20 @@
       "away": "Cubs",
       "home_score": 12,
       "away_score": 2
+    },
+    {
+      "date": "2026-05-12T21:45:00.000Z",
+      "home": "Royals",
+      "away": "Phillies",
+      "home_score": 2,
+      "away_score": 5
+    },
+    {
+      "date": "2026-05-12T21:45:00.000Z",
+      "home": "Padres",
+      "away": "Marlins",
+      "home_score": 5,
+      "away_score": 4
     }
   ]
 }
