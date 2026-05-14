@@ -1,6 +1,18 @@
 {
   "american_league": [
     {
+      "name": "Mariners",
+      "division": "american_league",
+      "w": 5,
+      "l": 1,
+      "t": 0,
+      "points": 10,
+      "division_points": 6,
+      "runs_scored": 46,
+      "runs_allowed": 32,
+      "division_runs_allowed": 21
+    },
+    {
       "name": "Royals",
       "division": "american_league",
       "w": 4,
@@ -11,18 +23,6 @@
       "runs_scored": 52,
       "runs_allowed": 23,
       "division_runs_allowed": 2
-    },
-    {
-      "name": "Mariners",
-      "division": "american_league",
-      "w": 4,
-      "l": 1,
-      "t": 0,
-      "points": 8,
-      "division_points": 4,
-      "runs_scored": 35,
-      "runs_allowed": 25,
-      "division_runs_allowed": 14
     },
     {
       "name": "Astros",
@@ -52,13 +52,13 @@
       "name": "Athletics",
       "division": "american_league",
       "w": 0,
-      "l": 4,
+      "l": 5,
       "t": 0,
       "points": 0,
       "division_points": 0,
-      "runs_scored": 15,
-      "runs_allowed": 43,
-      "division_runs_allowed": 19
+      "runs_scored": 22,
+      "runs_allowed": 54,
+      "division_runs_allowed": 30
     }
   ],
   "national_league": [
@@ -319,6 +319,13 @@
       "away": "Marlins",
       "home_score": 5,
       "away_score": 4
+    },
+    {
+      "date": "2026-05-13T21:45:00.000Z",
+      "home": "Mariners",
+      "away": "Athletics",
+      "home_score": 11,
+      "away_score": 7
     }
   ]
 }
