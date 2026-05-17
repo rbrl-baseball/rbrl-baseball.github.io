@@ -1,126 +1,126 @@
 {
   "american_league": [
     {
-      "name": "Mariners",
+      "name": "Royals",
       "division": "american_league",
       "w": 5,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 10,
       "division_points": 6,
-      "runs_scored": 46,
-      "runs_allowed": 32,
-      "division_runs_allowed": 21
+      "runs_scored": 56,
+      "runs_allowed": 25,
+      "division_runs_allowed": 4
     },
     {
-      "name": "Royals",
+      "name": "Mariners",
       "division": "american_league",
-      "w": 4,
+      "w": 5,
       "l": 2,
       "t": 0,
-      "points": 8,
-      "division_points": 4,
-      "runs_scored": 52,
-      "runs_allowed": 23,
-      "division_runs_allowed": 2
+      "points": 10,
+      "division_points": 6,
+      "runs_scored": 48,
+      "runs_allowed": 36,
+      "division_runs_allowed": 25
     },
     {
       "name": "Angels",
       "division": "american_league",
       "w": 2,
-      "l": 5,
+      "l": 6,
       "t": 0,
       "points": 4,
       "division_points": 2,
-      "runs_scored": 44,
-      "runs_allowed": 57,
-      "division_runs_allowed": 23
+      "runs_scored": 50,
+      "runs_allowed": 65,
+      "division_runs_allowed": 31
     },
     {
       "name": "Astros",
       "division": "american_league",
       "w": 2,
-      "l": 5,
+      "l": 6,
       "t": 0,
       "points": 4,
       "division_points": 2,
-      "runs_scored": 30,
-      "runs_allowed": 55,
+      "runs_scored": 34,
+      "runs_allowed": 72,
       "division_runs_allowed": 22
     },
     {
       "name": "Athletics",
       "division": "american_league",
-      "w": 0,
+      "w": 1,
       "l": 5,
       "t": 0,
-      "points": 0,
-      "division_points": 0,
-      "runs_scored": 22,
-      "runs_allowed": 54,
-      "division_runs_allowed": 30
+      "points": 2,
+      "division_points": 2,
+      "runs_scored": 30,
+      "runs_allowed": 60,
+      "division_runs_allowed": 36
     }
   ],
   "national_league": [
     {
       "name": "Marlins",
       "division": "national_league",
-      "w": 5,
+      "w": 6,
       "l": 1,
       "t": 0,
-      "points": 10,
-      "division_points": 4,
-      "runs_scored": 52,
-      "runs_allowed": 21,
-      "division_runs_allowed": 11
+      "points": 12,
+      "division_points": 6,
+      "runs_scored": 55,
+      "runs_allowed": 23,
+      "division_runs_allowed": 13
     },
     {
       "name": "Phillies",
       "division": "national_league",
-      "w": 5,
+      "w": 6,
       "l": 1,
       "t": 0,
-      "points": 10,
-      "division_points": 0,
-      "runs_scored": 53,
-      "runs_allowed": 26,
-      "division_runs_allowed": 9
+      "points": 12,
+      "division_points": 2,
+      "runs_scored": 61,
+      "runs_allowed": 30,
+      "division_runs_allowed": 13
     },
     {
-      "name": "Padres",
+      "name": "Pirates",
       "division": "national_league",
       "w": 3,
       "l": 3,
       "t": 0,
       "points": 6,
-      "division_points": 2,
-      "runs_scored": 30,
-      "runs_allowed": 32,
-      "division_runs_allowed": 10
+      "division_points": 4,
+      "runs_scored": 49,
+      "runs_allowed": 36,
+      "division_runs_allowed": 19
     },
     {
-      "name": "Pirates",
+      "name": "Padres",
       "division": "national_league",
-      "w": 2,
-      "l": 3,
+      "w": 3,
+      "l": 4,
       "t": 0,
-      "points": 4,
-      "division_points": 4,
+      "points": 6,
+      "division_points": 2,
       "runs_scored": 32,
-      "runs_allowed": 32,
-      "division_runs_allowed": 19
+      "runs_allowed": 35,
+      "division_runs_allowed": 13
     },
     {
       "name": "Cubs",
       "division": "national_league",
       "w": 2,
-      "l": 4,
+      "l": 5,
       "t": 0,
       "points": 4,
       "division_points": 2,
-      "runs_scored": 24,
-      "runs_allowed": 53,
-      "division_runs_allowed": 19
+      "runs_scored": 28,
+      "runs_allowed": 61,
+      "division_runs_allowed": 27
     }
   ],
   "games": [
@@ -333,6 +333,41 @@
       "away": "Angels",
       "home_score": 3,
       "away_score": 5
+    },
+    {
+      "date": "2026-05-16T16:30:00.000Z",
+      "home": "Phillies",
+      "away": "Cubs",
+      "home_score": 8,
+      "away_score": 4
+    },
+    {
+      "date": "2026-05-16T18:45:00.000Z",
+      "home": "Astros",
+      "away": "Pirates",
+      "home_score": 4,
+      "away_score": 17
+    },
+    {
+      "date": "2026-05-16T18:45:00.000Z",
+      "home": "Mariners",
+      "away": "Royals",
+      "home_score": 2,
+      "away_score": 4
+    },
+    {
+      "date": "2026-05-16T21:00:00.000Z",
+      "home": "Angels",
+      "away": "Athletics",
+      "home_score": 6,
+      "away_score": 8
+    },
+    {
+      "date": "2026-05-16T21:00:00.000Z",
+      "home": "Marlins",
+      "away": "Padres",
+      "home_score": 3,
+      "away_score": 2
     }
   ]
 }
