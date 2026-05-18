@@ -52,12 +52,12 @@
       "name": "Athletics",
       "division": "american_league",
       "w": 1,
-      "l": 5,
+      "l": 6,
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 30,
-      "runs_allowed": 60,
+      "runs_scored": 34,
+      "runs_allowed": 74,
       "division_runs_allowed": 36
     }
   ],
@@ -89,37 +89,37 @@
     {
       "name": "Pirates",
       "division": "national_league",
-      "w": 3,
+      "w": 4,
       "l": 3,
       "t": 0,
-      "points": 6,
-      "division_points": 4,
-      "runs_scored": 49,
-      "runs_allowed": 36,
-      "division_runs_allowed": 19
+      "points": 8,
+      "division_points": 6,
+      "runs_scored": 60,
+      "runs_allowed": 46,
+      "division_runs_allowed": 29
     },
     {
       "name": "Padres",
       "division": "national_league",
       "w": 3,
-      "l": 4,
+      "l": 5,
       "t": 0,
       "points": 6,
       "division_points": 2,
-      "runs_scored": 32,
-      "runs_allowed": 35,
-      "division_runs_allowed": 13
+      "runs_scored": 42,
+      "runs_allowed": 46,
+      "division_runs_allowed": 24
     },
     {
       "name": "Cubs",
       "division": "national_league",
-      "w": 2,
+      "w": 3,
       "l": 5,
       "t": 0,
-      "points": 4,
+      "points": 6,
       "division_points": 2,
-      "runs_scored": 28,
-      "runs_allowed": 61,
+      "runs_scored": 42,
+      "runs_allowed": 65,
       "division_runs_allowed": 27
     }
   ],
@@ -368,6 +368,20 @@
       "away": "Padres",
       "home_score": 3,
       "away_score": 2
+    },
+    {
+      "date": "2026-05-17T21:00:00.000Z",
+      "home": "Padres",
+      "away": "Pirates",
+      "home_score": 10,
+      "away_score": 11
+    },
+    {
+      "date": "2026-05-17T21:00:00.000Z",
+      "home": "Athletics",
+      "away": "Cubs",
+      "home_score": 4,
+      "away_score": 14
     }
   ]
 }
