@@ -3,13 +3,13 @@
     {
       "name": "Royals",
       "division": "american_league",
-      "w": 5,
+      "w": 6,
       "l": 2,
       "t": 0,
-      "points": 10,
+      "points": 12,
       "division_points": 6,
-      "runs_scored": 56,
-      "runs_allowed": 25,
+      "runs_scored": 62,
+      "runs_allowed": 29,
       "division_runs_allowed": 4
     },
     {
@@ -66,12 +66,12 @@
       "name": "Marlins",
       "division": "national_league",
       "w": 6,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 12,
       "division_points": 6,
-      "runs_scored": 55,
-      "runs_allowed": 23,
+      "runs_scored": 59,
+      "runs_allowed": 29,
       "division_runs_allowed": 13
     },
     {
@@ -382,6 +382,13 @@
       "away": "Cubs",
       "home_score": 4,
       "away_score": 14
+    },
+    {
+      "date": "2026-05-18T21:45:00.000Z",
+      "home": "Royals",
+      "away": "Marlins",
+      "home_score": 6,
+      "away_score": 4
     }
   ]
 }
