@@ -16,12 +16,12 @@
       "name": "Mariners",
       "division": "american_league",
       "w": 5,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 10,
       "division_points": 6,
-      "runs_scored": 48,
-      "runs_allowed": 36,
+      "runs_scored": 58,
+      "runs_allowed": 50,
       "division_runs_allowed": 25
     },
     {
@@ -89,13 +89,13 @@
     {
       "name": "Pirates",
       "division": "national_league",
-      "w": 4,
+      "w": 5,
       "l": 3,
       "t": 0,
-      "points": 8,
+      "points": 10,
       "division_points": 6,
-      "runs_scored": 60,
-      "runs_allowed": 46,
+      "runs_scored": 74,
+      "runs_allowed": 56,
       "division_runs_allowed": 29
     },
     {
@@ -389,6 +389,13 @@
       "away": "Marlins",
       "home_score": 6,
       "away_score": 4
+    },
+    {
+      "date": "2026-05-20T21:45:00.000Z",
+      "home": "Mariners",
+      "away": "Pirates",
+      "home_score": 10,
+      "away_score": 14
     }
   ]
 }
