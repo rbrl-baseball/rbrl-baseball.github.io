@@ -63,6 +63,18 @@
   ],
   "national_league": [
     {
+      "name": "Phillies",
+      "division": "national_league",
+      "w": 7,
+      "l": 1,
+      "t": 0,
+      "points": 14,
+      "division_points": 4,
+      "runs_scored": 69,
+      "runs_allowed": 30,
+      "division_runs_allowed": 13
+    },
+    {
       "name": "Marlins",
       "division": "national_league",
       "w": 6,
@@ -72,18 +84,6 @@
       "division_points": 6,
       "runs_scored": 59,
       "runs_allowed": 29,
-      "division_runs_allowed": 13
-    },
-    {
-      "name": "Phillies",
-      "division": "national_league",
-      "w": 6,
-      "l": 1,
-      "t": 0,
-      "points": 12,
-      "division_points": 2,
-      "runs_scored": 61,
-      "runs_allowed": 30,
       "division_runs_allowed": 13
     },
     {
@@ -99,18 +99,6 @@
       "division_runs_allowed": 29
     },
     {
-      "name": "Padres",
-      "division": "national_league",
-      "w": 3,
-      "l": 5,
-      "t": 0,
-      "points": 6,
-      "division_points": 2,
-      "runs_scored": 42,
-      "runs_allowed": 46,
-      "division_runs_allowed": 24
-    },
-    {
       "name": "Cubs",
       "division": "national_league",
       "w": 3,
@@ -121,6 +109,18 @@
       "runs_scored": 42,
       "runs_allowed": 65,
       "division_runs_allowed": 27
+    },
+    {
+      "name": "Padres",
+      "division": "national_league",
+      "w": 3,
+      "l": 6,
+      "t": 0,
+      "points": 6,
+      "division_points": 2,
+      "runs_scored": 42,
+      "runs_allowed": 54,
+      "division_runs_allowed": 32
     }
   ],
   "games": [
@@ -396,6 +396,13 @@
       "away": "Pirates",
       "home_score": 10,
       "away_score": 14
+    },
+    {
+      "date": "2026-05-21T21:45:00.000Z",
+      "home": "Padres",
+      "away": "Phillies",
+      "home_score": 0,
+      "away_score": 8
     }
   ]
 }
