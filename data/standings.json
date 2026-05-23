@@ -3,14 +3,14 @@
     {
       "name": "Royals",
       "division": "american_league",
-      "w": 6,
+      "w": 7,
       "l": 2,
       "t": 0,
-      "points": 12,
-      "division_points": 6,
-      "runs_scored": 62,
-      "runs_allowed": 29,
-      "division_runs_allowed": 4
+      "points": 14,
+      "division_points": 8,
+      "runs_scored": 70,
+      "runs_allowed": 33,
+      "division_runs_allowed": 8
     },
     {
       "name": "Mariners",
@@ -52,27 +52,27 @@
       "name": "Athletics",
       "division": "american_league",
       "w": 1,
-      "l": 6,
+      "l": 7,
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 34,
-      "runs_allowed": 74,
-      "division_runs_allowed": 36
+      "runs_scored": 38,
+      "runs_allowed": 82,
+      "division_runs_allowed": 44
     }
   ],
   "national_league": [
     {
       "name": "Phillies",
       "division": "national_league",
-      "w": 7,
+      "w": 8,
       "l": 1,
       "t": 0,
-      "points": 14,
-      "division_points": 4,
-      "runs_scored": 69,
-      "runs_allowed": 30,
-      "division_runs_allowed": 13
+      "points": 16,
+      "division_points": 6,
+      "runs_scored": 80,
+      "runs_allowed": 31,
+      "division_runs_allowed": 14
     },
     {
       "name": "Marlins",
@@ -90,13 +90,13 @@
       "name": "Pirates",
       "division": "national_league",
       "w": 5,
-      "l": 3,
+      "l": 4,
       "t": 0,
       "points": 10,
       "division_points": 6,
-      "runs_scored": 74,
-      "runs_allowed": 56,
-      "division_runs_allowed": 29
+      "runs_scored": 75,
+      "runs_allowed": 67,
+      "division_runs_allowed": 40
     },
     {
       "name": "Cubs",
@@ -403,6 +403,20 @@
       "away": "Phillies",
       "home_score": 0,
       "away_score": 8
+    },
+    {
+      "date": "2026-05-22T21:45:00.000Z",
+      "home": "Royals",
+      "away": "Athletics",
+      "home_score": 8,
+      "away_score": 4
+    },
+    {
+      "date": "2026-05-22T21:45:00.000Z",
+      "home": "Phillies",
+      "away": "Pirates",
+      "home_score": 11,
+      "away_score": 1
     }
   ]
 }
