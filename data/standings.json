@@ -16,13 +16,13 @@
       "name": "Mariners",
       "division": "american_league",
       "w": 6,
-      "l": 3,
+      "l": 4,
       "t": 0,
       "points": 12,
       "division_points": 8,
-      "runs_scored": 69,
-      "runs_allowed": 58,
-      "division_runs_allowed": 33
+      "runs_scored": 79,
+      "runs_allowed": 69,
+      "division_runs_allowed": 44
     },
     {
       "name": "Angels",
@@ -39,25 +39,25 @@
     {
       "name": "Astros",
       "division": "american_league",
-      "w": 2,
+      "w": 3,
       "l": 6,
       "t": 0,
-      "points": 4,
-      "division_points": 2,
-      "runs_scored": 34,
-      "runs_allowed": 72,
-      "division_runs_allowed": 22
+      "points": 6,
+      "division_points": 4,
+      "runs_scored": 45,
+      "runs_allowed": 82,
+      "division_runs_allowed": 32
     },
     {
       "name": "Athletics",
       "division": "american_league",
       "w": 1,
-      "l": 8,
+      "l": 9,
       "t": 0,
       "points": 2,
       "division_points": 2,
-      "runs_scored": 46,
-      "runs_allowed": 93,
+      "runs_scored": 51,
+      "runs_allowed": 99,
       "division_runs_allowed": 55
     }
   ],
@@ -89,13 +89,13 @@
     {
       "name": "Pirates",
       "division": "national_league",
-      "w": 5,
+      "w": 6,
       "l": 5,
       "t": 0,
-      "points": 10,
+      "points": 12,
       "division_points": 6,
-      "runs_scored": 81,
-      "runs_allowed": 76,
+      "runs_scored": 87,
+      "runs_allowed": 81,
       "division_runs_allowed": 40
     },
     {
@@ -445,6 +445,20 @@
       "away": "Cubs",
       "home_score": 7,
       "away_score": 1
+    },
+    {
+      "date": "2026-05-27T21:45:00.000Z",
+      "home": "Pirates",
+      "away": "Athletics",
+      "home_score": 6,
+      "away_score": 5
+    },
+    {
+      "date": "2026-05-27T21:45:00.000Z",
+      "home": "Mariners",
+      "away": "Astros",
+      "home_score": 10,
+      "away_score": 11
     }
   ]
 }
