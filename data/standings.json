@@ -65,26 +65,26 @@
     {
       "name": "Phillies",
       "division": "national_league",
-      "w": 8,
+      "w": 9,
       "l": 1,
       "t": 0,
-      "points": 16,
-      "division_points": 6,
-      "runs_scored": 80,
-      "runs_allowed": 31,
-      "division_runs_allowed": 14
+      "points": 18,
+      "division_points": 8,
+      "runs_scored": 87,
+      "runs_allowed": 32,
+      "division_runs_allowed": 15
     },
     {
       "name": "Marlins",
       "division": "national_league",
-      "w": 7,
+      "w": 8,
       "l": 2,
       "t": 0,
-      "points": 14,
-      "division_points": 8,
-      "runs_scored": 66,
-      "runs_allowed": 30,
-      "division_runs_allowed": 14
+      "points": 16,
+      "division_points": 10,
+      "runs_scored": 82,
+      "runs_allowed": 33,
+      "division_runs_allowed": 17
     },
     {
       "name": "Pirates",
@@ -102,25 +102,25 @@
       "name": "Padres",
       "division": "national_league",
       "w": 3,
-      "l": 6,
+      "l": 7,
       "t": 0,
       "points": 6,
       "division_points": 2,
-      "runs_scored": 42,
-      "runs_allowed": 54,
-      "division_runs_allowed": 32
+      "runs_scored": 43,
+      "runs_allowed": 61,
+      "division_runs_allowed": 39
     },
     {
       "name": "Cubs",
       "division": "national_league",
       "w": 3,
-      "l": 6,
+      "l": 7,
       "t": 0,
       "points": 6,
       "division_points": 2,
-      "runs_scored": 43,
-      "runs_allowed": 72,
-      "division_runs_allowed": 34
+      "runs_scored": 46,
+      "runs_allowed": 88,
+      "division_runs_allowed": 50
     }
   ],
   "games": [
@@ -459,6 +459,20 @@
       "away": "Astros",
       "home_score": 10,
       "away_score": 11
+    },
+    {
+      "date": "2026-05-28T21:45:00.000Z",
+      "home": "Cubs",
+      "away": "Marlins",
+      "home_score": 3,
+      "away_score": 16
+    },
+    {
+      "date": "2026-05-28T21:45:00.000Z",
+      "home": "Phillies",
+      "away": "Padres",
+      "home_score": 7,
+      "away_score": 1
     }
   ]
 }
