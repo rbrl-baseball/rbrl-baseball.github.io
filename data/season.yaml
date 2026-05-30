@@ -1,0 +1,6 @@
+# Season configuration
+#
+# regular_season_end: Last day of the regular season (YYYY-MM-DD, UTC).
+# Games after this date are considered playoff games and excluded from
+# standings. Adjust each season as needed.
+regular_season_end: "2026-06-05"

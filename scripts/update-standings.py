@@ -11,6 +11,7 @@ ORG_EVENTS_URL = f"https://api.team-manager.gc.com/public/organizations/{ORG_ID}
 
 ROOT = Path(__file__).resolve().parent.parent
 TEAMS_FILE = ROOT / "data" / "teams.yaml"
+SEASON_FILE = ROOT / "data" / "season.yaml"
 STANDINGS_FILE = ROOT / "data" / "standings.json"
 
 
@@ -27,6 +28,14 @@ def load_teams():
     return team_map
 
 
+def load_season_config():
+    """Load season configuration from data/season.yaml."""
+    if SEASON_FILE.exists():
+        with open(SEASON_FILE) as f:
+            return yaml.safe_load(f) or {}
+    return {}
+
+
 def fetch_org_events():
     """Fetch all scheduled events for the league organization.
 
@@ -39,12 +48,23 @@ def fetch_org_events():
         return json.loads(resp.read())
 
 
-def collect_completed_games(team_map):
-    """Pick completed games from the org schedule with both league teams."""
+def collect_completed_games(team_map, regular_season_end=None):
+    """Pick completed regular-season games from the org schedule.
+
+    Games involving teams not in team_map (e.g. playoff placeholders) are
+    excluded automatically.  If *regular_season_end* is set (YYYY-MM-DD),
+    games after that date are treated as playoff games and excluded.
+    """
     games = []
     for event in fetch_org_events():
         if event.get("game_status") != "completed":
             continue
+
+        # Exclude post-season games
+        if regular_season_end:
+            start_ts = event.get("start_ts", "")
+            if start_ts and start_ts[:10] > regular_season_end:
+                continue
 
         home = event.get("home_team") or {}
         away = event.get("away_team") or {}
@@ -240,7 +260,9 @@ def resolve_ties(group, games):
 
 def main():
     team_map = load_teams()
-    completed = collect_completed_games(team_map)
+    season = load_season_config()
+    regular_season_end = season.get("regular_season_end")
+    completed = collect_completed_games(team_map, regular_season_end)
     standings = compute_standings(completed, team_map)
 
     with open(STANDINGS_FILE, "w") as f:

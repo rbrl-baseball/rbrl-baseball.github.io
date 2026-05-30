@@ -13,6 +13,7 @@
 - Team data lives in `data/teams.yaml`. Each team has a `gc_team_id` from the GameChanger public API. These IDs are **not** UUIDs — they're short alphanumeric strings like `H31Y5RGs1o5n`.
 - Sponsor data lives in `data/sponsors.yaml` as a top-level YAML array.
 - `data/standings.json` is **auto-generated** by `scripts/update-standings.py`. Don't edit it manually.
+- `data/season.yaml` holds per-season config. `regular_season_end` (YYYY-MM-DD) controls the cutoff after which games are treated as playoffs and excluded from standings.
 
 ## GameChanger Integration
 
@@ -59,3 +60,5 @@
 - Points system: 2 for win, 1 for tie, 0 for loss. Sorted by points, then wins, then fewest losses.
 - The standings script stores per-game results (`games` array in standings.json) for future tiebreaker support (head-to-head, intra-division record).
 - The script maps GC team names (which may differ, e.g., "RBRL Padres", "A's", "Mariners - RBRL") to canonical names via `gc_team_id` lookup against `data/teams.yaml`.
+- Games after `regular_season_end` (from `data/season.yaml`) are excluded from standings as playoff games.
+- Teams not in `data/teams.yaml` (e.g. playoff placeholder teams like "TBD Team 1") are automatically excluded from standings and the teams page. They still appear in the GameChanger schedule widget.
