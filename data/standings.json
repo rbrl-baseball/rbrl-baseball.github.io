@@ -63,28 +63,28 @@
   ],
   "national_league": [
     {
+      "name": "Marlins",
+      "division": "national_league",
+      "w": 9,
+      "l": 2,
+      "t": 0,
+      "points": 18,
+      "division_points": 12,
+      "runs_scored": 90,
+      "runs_allowed": 37,
+      "division_runs_allowed": 21
+    },
+    {
       "name": "Phillies",
       "division": "national_league",
       "w": 9,
-      "l": 1,
+      "l": 2,
       "t": 0,
       "points": 18,
       "division_points": 8,
-      "runs_scored": 87,
-      "runs_allowed": 32,
-      "division_runs_allowed": 15
-    },
-    {
-      "name": "Marlins",
-      "division": "national_league",
-      "w": 8,
-      "l": 2,
-      "t": 0,
-      "points": 16,
-      "division_points": 10,
-      "runs_scored": 82,
-      "runs_allowed": 33,
-      "division_runs_allowed": 17
+      "runs_scored": 91,
+      "runs_allowed": 40,
+      "division_runs_allowed": 23
     },
     {
       "name": "Pirates",
@@ -101,26 +101,26 @@
     {
       "name": "Padres",
       "division": "national_league",
-      "w": 3,
+      "w": 4,
       "l": 7,
       "t": 0,
-      "points": 6,
-      "division_points": 2,
-      "runs_scored": 43,
-      "runs_allowed": 61,
-      "division_runs_allowed": 39
+      "points": 8,
+      "division_points": 4,
+      "runs_scored": 53,
+      "runs_allowed": 63,
+      "division_runs_allowed": 41
     },
     {
       "name": "Cubs",
       "division": "national_league",
       "w": 3,
-      "l": 7,
+      "l": 8,
       "t": 0,
       "points": 6,
       "division_points": 2,
-      "runs_scored": 46,
-      "runs_allowed": 88,
-      "division_runs_allowed": 50
+      "runs_scored": 48,
+      "runs_allowed": 98,
+      "division_runs_allowed": 60
     }
   ],
   "games": [
@@ -473,6 +473,20 @@
       "away": "Padres",
       "home_score": 7,
       "away_score": 1
+    },
+    {
+      "date": "2026-06-01T21:45:00.000Z",
+      "home": "Padres",
+      "away": "Cubs",
+      "home_score": 10,
+      "away_score": 2
+    },
+    {
+      "date": "2026-06-01T21:45:00.000Z",
+      "home": "Marlins",
+      "away": "Phillies",
+      "home_score": 8,
+      "away_score": 4
     }
   ]
 }
