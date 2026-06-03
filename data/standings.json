@@ -78,25 +78,25 @@
       "name": "Phillies",
       "division": "national_league",
       "w": 9,
-      "l": 2,
+      "l": 3,
       "t": 0,
       "points": 18,
       "division_points": 8,
-      "runs_scored": 91,
-      "runs_allowed": 40,
-      "division_runs_allowed": 23
+      "runs_scored": 92,
+      "runs_allowed": 51,
+      "division_runs_allowed": 34
     },
     {
       "name": "Pirates",
       "division": "national_league",
-      "w": 6,
+      "w": 7,
       "l": 5,
       "t": 0,
-      "points": 12,
-      "division_points": 6,
-      "runs_scored": 87,
-      "runs_allowed": 81,
-      "division_runs_allowed": 40
+      "points": 14,
+      "division_points": 8,
+      "runs_scored": 98,
+      "runs_allowed": 82,
+      "division_runs_allowed": 41
     },
     {
       "name": "Padres",
@@ -487,6 +487,13 @@
       "away": "Phillies",
       "home_score": 8,
       "away_score": 4
+    },
+    {
+      "date": "2026-06-02T21:45:00.000Z",
+      "home": "Pirates",
+      "away": "Phillies",
+      "home_score": 11,
+      "away_score": 1
     }
   ]
 }
