@@ -3,14 +3,14 @@
     {
       "name": "Royals",
       "division": "american_league",
-      "w": 8,
+      "w": 9,
       "l": 2,
       "t": 0,
-      "points": 16,
-      "division_points": 10,
-      "runs_scored": 85,
-      "runs_allowed": 36,
-      "division_runs_allowed": 11
+      "points": 18,
+      "division_points": 12,
+      "runs_scored": 91,
+      "runs_allowed": 39,
+      "division_runs_allowed": 14
     },
     {
       "name": "Mariners",
@@ -40,13 +40,13 @@
       "name": "Astros",
       "division": "american_league",
       "w": 3,
-      "l": 6,
+      "l": 7,
       "t": 0,
       "points": 6,
       "division_points": 4,
-      "runs_scored": 45,
-      "runs_allowed": 82,
-      "division_runs_allowed": 32
+      "runs_scored": 48,
+      "runs_allowed": 88,
+      "division_runs_allowed": 38
     },
     {
       "name": "Athletics",
@@ -101,26 +101,26 @@
     {
       "name": "Padres",
       "division": "national_league",
-      "w": 4,
+      "w": 5,
       "l": 7,
       "t": 0,
-      "points": 8,
-      "division_points": 4,
-      "runs_scored": 53,
-      "runs_allowed": 63,
-      "division_runs_allowed": 41
+      "points": 10,
+      "division_points": 6,
+      "runs_scored": 63,
+      "runs_allowed": 70,
+      "division_runs_allowed": 48
     },
     {
       "name": "Cubs",
       "division": "national_league",
       "w": 3,
-      "l": 8,
+      "l": 9,
       "t": 0,
       "points": 6,
       "division_points": 2,
-      "runs_scored": 48,
-      "runs_allowed": 98,
-      "division_runs_allowed": 60
+      "runs_scored": 55,
+      "runs_allowed": 108,
+      "division_runs_allowed": 70
     }
   ],
   "games": [
@@ -494,6 +494,20 @@
       "away": "Phillies",
       "home_score": 11,
       "away_score": 1
+    },
+    {
+      "date": "2026-06-03T21:45:00.000Z",
+      "home": "Cubs",
+      "away": "Padres",
+      "home_score": 7,
+      "away_score": 10
+    },
+    {
+      "date": "2026-06-03T21:45:00.000Z",
+      "home": "Astros",
+      "away": "Royals",
+      "home_score": 3,
+      "away_score": 6
     }
   ]
 }
