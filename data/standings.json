@@ -3,50 +3,50 @@
     {
       "name": "Royals",
       "division": "american_league",
-      "w": 9,
+      "w": 10,
       "l": 2,
       "t": 0,
-      "points": 18,
-      "division_points": 12,
-      "runs_scored": 91,
-      "runs_allowed": 39,
-      "division_runs_allowed": 14
+      "points": 20,
+      "division_points": 14,
+      "runs_scored": 98,
+      "runs_allowed": 45,
+      "division_runs_allowed": 20
     },
     {
       "name": "Mariners",
       "division": "american_league",
       "w": 6,
-      "l": 5,
+      "l": 6,
       "t": 0,
       "points": 12,
       "division_points": 8,
-      "runs_scored": 86,
-      "runs_allowed": 82,
-      "division_runs_allowed": 44
+      "runs_scored": 92,
+      "runs_allowed": 89,
+      "division_runs_allowed": 51
     },
     {
       "name": "Angels",
       "division": "american_league",
-      "w": 4,
+      "w": 5,
       "l": 7,
       "t": 0,
-      "points": 8,
-      "division_points": 4,
-      "runs_scored": 68,
-      "runs_allowed": 88,
-      "division_runs_allowed": 48
+      "points": 10,
+      "division_points": 6,
+      "runs_scored": 72,
+      "runs_allowed": 90,
+      "division_runs_allowed": 50
     },
     {
       "name": "Astros",
       "division": "american_league",
       "w": 3,
-      "l": 7,
+      "l": 8,
       "t": 0,
       "points": 6,
       "division_points": 4,
-      "runs_scored": 48,
-      "runs_allowed": 88,
-      "division_runs_allowed": 38
+      "runs_scored": 50,
+      "runs_allowed": 92,
+      "division_runs_allowed": 42
     },
     {
       "name": "Athletics",
@@ -522,6 +522,20 @@
       "away": "Mariners",
       "home_score": 13,
       "away_score": 7
+    },
+    {
+      "date": "2026-06-05T21:45:00.000Z",
+      "home": "Royals",
+      "away": "Mariners",
+      "home_score": 7,
+      "away_score": 6
+    },
+    {
+      "date": "2026-06-05T21:45:00.000Z",
+      "home": "Angels",
+      "away": "Astros",
+      "home_score": 4,
+      "away_score": 2
     }
   ]
 }
