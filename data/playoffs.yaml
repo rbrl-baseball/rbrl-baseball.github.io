@@ -1,0 +1,108 @@
+# Playoff bracket data — manually updated as games are played.
+# status: scheduled | final | postponed
+# Scores and winner fields are added after each game.
+# When a winner is determined, update the next round's TBD slot.
+
+american_league:
+  play_in:
+    label: "Play-In Game"
+    date: "2026-06-08"
+    time: "5:30 PM"
+    status: "scheduled"
+    home:
+      seed: 4
+      name: "Astros"
+    away:
+      seed: 5
+      name: "Athletics"
+  semifinal_lower:
+    label: "AL Semifinal"
+    date: "2026-06-10"
+    time: "TBD"
+    status: "scheduled"
+    home:
+      seed: 1
+      name: "Royals"
+    away:
+      name: "TBD"
+      note: "Play-In Winner"
+  semifinal_upper:
+    label: "AL Semifinal"
+    date: "2026-06-09"
+    time: "TBD"
+    status: "scheduled"
+    home:
+      seed: 2
+      name: "Mariners"
+    away:
+      seed: 3
+      name: "Angels"
+  championship:
+    label: "AL Championship"
+    date: "2026-06-12"
+    time: "TBD"
+    status: "scheduled"
+    home:
+      name: "TBD"
+    away:
+      name: "TBD"
+
+national_league:
+  play_in:
+    label: "Play-In Game"
+    date: "2026-06-08"
+    time: "5:30 PM"
+    status: "scheduled"
+    home:
+      seed: 4
+      name: "Padres"
+    away:
+      seed: 5
+      name: "Cubs"
+  semifinal_lower:
+    label: "NL Semifinal"
+    date: "2026-06-10"
+    time: "TBD"
+    status: "scheduled"
+    home:
+      seed: 1
+      name: "Marlins"
+    away:
+      name: "TBD"
+      note: "Play-In Winner"
+  semifinal_upper:
+    label: "NL Semifinal"
+    date: "2026-06-09"
+    time: "TBD"
+    status: "scheduled"
+    home:
+      seed: 2
+      name: "Phillies"
+    away:
+      seed: 3
+      name: "Pirates"
+  championship:
+    label: "NL Championship"
+    date: "2026-06-12"
+    time: "TBD"
+    status: "scheduled"
+    home:
+      name: "TBD"
+    away:
+      name: "TBD"
+
+world_series:
+  format: "Best of 3"
+  al_champion: "TBD"
+  nl_champion: "TBD"
+  games:
+    - date: "2026-06-15"
+      time: "TBD"
+      status: "scheduled"
+    - date: "2026-06-16"
+      time: "TBD"
+      status: "scheduled"
+    - date: "2026-06-17"
+      time: "TBD"
+      status: "scheduled"
+      if_necessary: true

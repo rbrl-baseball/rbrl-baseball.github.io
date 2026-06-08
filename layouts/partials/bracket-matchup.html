@@ -1,0 +1,72 @@
+{{/*
+  Bracket Matchup — a single game card in the playoff bracket.
+
+  Expects context dict with:
+    .game   — the matchup object from playoffs.yaml
+    .logos  — name→logo path map
+    .round  — "play_in" | "semifinal" | "championship"
+*/}}
+
+{{ $game := .game }}
+{{ $logos := .logos }}
+{{ $round := .round }}
+{{ $isFinal := eq $game.status "final" }}
+{{ $isPostponed := eq $game.status "postponed" }}
+
+{{ $homeWin := false }}
+{{ $awayWin := false }}
+{{ if $isFinal }}
+  {{ $homeWin = gt $game.home_score $game.away_score }}
+  {{ $awayWin = gt $game.away_score $game.home_score }}
+{{ end }}
+
+{{ $homeLogo := index $logos $game.home.name }}
+{{ $awayLogo := index $logos $game.away.name }}
+{{ $homeTBD := eq $game.home.name "TBD" }}
+{{ $awayTBD := eq $game.away.name "TBD" }}
+
+{{ $d := time.AsTime $game.date }}
+
+<div class="matchup-card br2 mb3 {{ if $isFinal }}matchup-final{{ end }} {{ if eq $round "championship" }}matchup-championship{{ end }}">
+  <div class="matchup-label f7 ttu tracked mid-gray pa2 bb b--light-gray flex items-center justify-between">
+    <span>{{ $game.label }}</span>
+    <span>
+      {{ $d.Format "Mon, Jan 2" }}{{ with $game.time }}{{ if ne . "TBD" }} · {{ . }}{{ end }}{{ end }}
+      {{ if $isPostponed }}<span class="fw6" style="color: var(--rbrl-red);"> · PPD</span>{{ end }}
+      {{ if $isFinal }}<span class="fw6" style="color: var(--rbrl-blue);"> · Final</span>{{ end }}
+    </span>
+  </div>
+
+  {{/* Away team row (visitor listed first) */}}
+  <div class="matchup-team pa2 flex items-center {{ if and $isFinal (not $awayWin) }}matchup-loser{{ end }}">
+    {{ if $awayLogo }}
+      <img src="{{ $awayLogo }}" alt="{{ $game.away.name }} logo" class="matchup-logo" loading="lazy">
+    {{ else }}
+      <div class="matchup-logo-placeholder"></div>
+    {{ end }}
+    <span class="matchup-name flex-auto {{ if $awayTBD }}mid-gray i{{ end }}">
+      {{ with $game.away.seed }}<span class="matchup-seed">{{ . }}</span>{{ end }}
+      {{ $game.away.name }}
+      {{ with $game.away.note }}<span class="f7 normal mid-gray ml1">({{ . }})</span>{{ end }}
+    </span>
+    {{ if $isFinal }}
+      <span class="matchup-score {{ if $awayWin }}matchup-winner-score{{ end }}">{{ $game.away_score }}</span>
+    {{ end }}
+  </div>
+
+  {{/* Home team row */}}
+  <div class="matchup-team pa2 flex items-center {{ if and $isFinal (not $homeWin) }}matchup-loser{{ end }}">
+    {{ if $homeLogo }}
+      <img src="{{ $homeLogo }}" alt="{{ $game.home.name }} logo" class="matchup-logo" loading="lazy">
+    {{ else }}
+      <div class="matchup-logo-placeholder"></div>
+    {{ end }}
+    <span class="matchup-name flex-auto {{ if $homeTBD }}mid-gray i{{ end }}">
+      {{ with $game.home.seed }}<span class="matchup-seed">{{ . }}</span>{{ end }}
+      {{ $game.home.name }}
+    </span>
+    {{ if $isFinal }}
+      <span class="matchup-score {{ if $homeWin }}matchup-winner-score{{ end }}">{{ $game.home_score }}</span>
+    {{ end }}
+  </div>
+</div>

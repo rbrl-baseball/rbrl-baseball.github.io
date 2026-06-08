@@ -725,3 +725,115 @@ body > footer {
     margin-bottom: 0;
   }
 }
+
+/* ============================================
+   Playoff Bracket
+   ============================================ */
+.bracket-card {
+  border: 1px solid #e0e0e0;
+}
+
+.bracket-header.bg-dark-red {
+  background-color: var(--rbrl-red) !important;
+}
+
+.matchup-card {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.matchup-championship {
+  border: 2px solid var(--rbrl-blue);
+}
+
+.matchup-final {
+  border-color: #ccc;
+}
+
+.matchup-label {
+  background: #fafafa;
+  font-size: 0.7rem;
+}
+
+.matchup-team {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.matchup-team:last-child {
+  border-bottom: none;
+}
+
+.matchup-logo {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+}
+
+.matchup-logo-placeholder {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.matchup-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.matchup-seed {
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.3em;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 50%;
+  background: var(--rbrl-blue);
+  color: #fff;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.matchup-score {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #999;
+  font-variant-numeric: tabular-nums;
+  min-width: 2ch;
+  text-align: right;
+}
+
+.matchup-winner-score {
+  font-weight: 700;
+  color: var(--rbrl-blue);
+}
+
+.matchup-loser .matchup-name,
+.matchup-loser .matchup-logo {
+  opacity: 0.5;
+}
+
+/* World Series */
+.ws-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.ws-game {
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+.ws-if-necessary {
+  border-style: dashed;
+  opacity: 0.7;
+}
