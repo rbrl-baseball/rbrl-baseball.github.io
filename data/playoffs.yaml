@@ -1,7 +1,6 @@
-# Playoff bracket data — manually updated as games are played.
-# status: scheduled | final | postponed
-# Scores and winner fields are added after each game.
-# When a winner is determined, update the next round's TBD slot.
+# Playoff bracket data — updated automatically by scripts/update-playoffs.py
+# Manual edits to scores/status will be overwritten on next run.
+# gc_event_id links each game to the GameChanger schedule for auto-updates.
 
 american_league:
   play_in:
@@ -9,39 +8,43 @@ american_league:
     date: "2026-06-08"
     time: "5:30 PM"
     status: "scheduled"
+    gc_event_id: "4cf85c1c-7162-4533-8f6a-77546df56ee6"
     home:
       seed: 4
       name: "Astros"
     away:
       seed: 5
       name: "Athletics"
-  semifinal_lower:
-    label: "AL Semifinal"
-    date: "2026-06-10"
-    time: "TBD"
-    status: "scheduled"
-    home:
-      seed: 1
-      name: "Royals"
-    away:
-      name: "TBD"
-      note: "Play-In Winner"
   semifinal_upper:
     label: "AL Semifinal"
     date: "2026-06-09"
     time: "TBD"
     status: "scheduled"
+    gc_event_id: "bf2c776e-095c-47c3-a889-4aaedbbdc0c4"
     home:
       seed: 2
       name: "Mariners"
     away:
       seed: 3
       name: "Angels"
+  semifinal_lower:
+    label: "AL Semifinal"
+    date: "2026-06-10"
+    time: "TBD"
+    status: "scheduled"
+    gc_event_id: "f7b8cb53-2f2a-4dc6-9961-3d22c669780c"
+    home:
+      seed: 1
+      name: "Royals"
+    away:
+      name: "TBD"
+      note: "Play-In Winner"
   championship:
     label: "AL Championship"
     date: "2026-06-12"
     time: "TBD"
     status: "scheduled"
+    gc_event_id: "4aa74e10-880c-480f-ba6d-6f675139965a"
     home:
       name: "TBD"
     away:
@@ -53,39 +56,43 @@ national_league:
     date: "2026-06-08"
     time: "5:30 PM"
     status: "scheduled"
+    gc_event_id: "274ac50b-3371-4fce-979f-0ca8e2128bd9"
     home:
       seed: 4
       name: "Padres"
     away:
       seed: 5
       name: "Cubs"
-  semifinal_lower:
-    label: "NL Semifinal"
-    date: "2026-06-10"
-    time: "TBD"
-    status: "scheduled"
-    home:
-      seed: 1
-      name: "Marlins"
-    away:
-      name: "TBD"
-      note: "Play-In Winner"
   semifinal_upper:
     label: "NL Semifinal"
     date: "2026-06-09"
     time: "TBD"
     status: "scheduled"
+    gc_event_id: "bbfb6b1a-e316-4cd1-a29f-664382523f89"
     home:
       seed: 2
       name: "Phillies"
     away:
       seed: 3
       name: "Pirates"
+  semifinal_lower:
+    label: "NL Semifinal"
+    date: "2026-06-10"
+    time: "TBD"
+    status: "scheduled"
+    gc_event_id: "4a87f785-b8d9-4bf1-b411-840262597d8e"
+    home:
+      seed: 1
+      name: "Marlins"
+    away:
+      name: "TBD"
+      note: "Play-In Winner"
   championship:
     label: "NL Championship"
     date: "2026-06-12"
     time: "TBD"
     status: "scheduled"
+    gc_event_id: "b8e273b2-5259-403a-9896-10b938be1634"
     home:
       name: "TBD"
     away:
@@ -99,10 +106,13 @@ world_series:
     - date: "2026-06-15"
       time: "TBD"
       status: "scheduled"
+      gc_event_id: "f9afb585-816d-4dd6-b21f-ced4ee6110ed"
     - date: "2026-06-16"
       time: "TBD"
       status: "scheduled"
+      gc_event_id: "3feb6af9-aa05-4ba4-bf06-ba2f49b571c8"
     - date: "2026-06-17"
       time: "TBD"
       status: "scheduled"
+      gc_event_id: "77d13a76-ea9e-4395-a519-5cc93094f945"
       if_necessary: true
