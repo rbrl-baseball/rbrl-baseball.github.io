@@ -818,11 +818,11 @@ body > footer {
 }
 
 .matchup-seed {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 1.3em;
   height: 1.3em;
-  line-height: 1.3em;
-  text-align: center;
   font-size: 0.7rem;
   font-weight: 700;
   border-radius: 50%;
