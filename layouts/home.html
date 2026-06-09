@@ -34,8 +34,10 @@
   </section>
   {{ end }}
 
-  {{/* Recent Results (rendered from data/standings.json) */}}
+  {{/* Recent Results — hidden during playoffs (bracket shows scores instead) */}}
+  {{ if not $playoffMode }}
   {{ partial "recent-results.html" . }}
+  {{ end }}
 
   {{/* GameChanger Scoreboard — upcoming only */}}
   <section class="w-100 pv4">
