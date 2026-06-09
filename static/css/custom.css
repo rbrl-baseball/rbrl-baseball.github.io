@@ -736,6 +736,7 @@ body > footer {
 @media (min-width: 45em) {
   .playoff-container > .flex {
     flex-direction: row;
+    gap: 1.5rem;
   }
 
   .playoff-container > .flex > div {
