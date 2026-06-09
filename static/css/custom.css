@@ -729,6 +729,20 @@ body > footer {
 /* ============================================
    Playoff Bracket
    ============================================ */
+.playoff-container > .flex {
+  flex-direction: column;
+}
+
+@media (min-width: 45em) {
+  .playoff-container > .flex {
+    flex-direction: row;
+  }
+
+  .playoff-container > .flex > div {
+    width: 50%;
+  }
+}
+
 .bracket-card {
   border: 1px solid #e0e0e0;
 }
