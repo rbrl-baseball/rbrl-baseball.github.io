@@ -158,9 +158,9 @@ def advance_winners(bracket, team_map):
 
         next_game = bracket.get(next_league, {}).get(next_round, {})
         next_slot = next_game.get(slot, {})
-        if next_slot.get("name") != winner:
+        seed = find_seed(bracket, league, winner)
+        if next_slot.get("name") != winner or (seed is not None and "seed" not in next_slot):
             next_slot["name"] = winner
-            seed = find_seed(bracket, league, winner)
             if seed is not None:
                 next_slot["seed"] = seed
             if "note" in next_slot:

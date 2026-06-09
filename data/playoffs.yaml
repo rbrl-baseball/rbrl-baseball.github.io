@@ -37,6 +37,7 @@ american_league:
       name: Royals
     away:
       name: Athletics
+      seed: 5
   championship:
     label: AL Championship
     date: '2026-06-12'
@@ -86,6 +87,7 @@ national_league:
       name: Marlins
     away:
       name: Padres
+      seed: 4
   championship:
     label: NL Championship
     date: '2026-06-12'
