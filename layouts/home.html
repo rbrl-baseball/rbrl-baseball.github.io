@@ -1,6 +1,14 @@
 {{ define "title" }}Reading Babe Ruth Baseball League — Youth Baseball in Reading, MA{{ end }}
 
 {{ define "main" }}
+  {{/* Playoff mode activates automatically after regular_season_end */}}
+  {{ $playoffMode := false }}
+  {{ with hugo.Data.season.regular_season_end }}
+    {{ if and hugo.Data.playoffs (gt (now.Format "2006-01-02") .) }}
+      {{ $playoffMode = true }}
+    {{ end }}
+  {{ end }}
+
   {{/* Latest News */}}
   {{ $news := where .Site.RegularPages "Section" "news" }}
   {{ if $news }}
@@ -77,8 +85,8 @@
     </div>
   </section>
 
-  {{/* Playoff Bracket (shown when data/playoffs.yaml exists) */}}
-  {{ if hugo.Data.playoffs }}
+  {{/* Playoff Bracket (shown after regular season ends) */}}
+  {{ if $playoffMode }}
   <section class="w-100 pv4">
     <div class="ph3 ph5-l center mw8">
       <h2 class="f3 fw6 dark-blue mb3">🏆 Playoffs</h2>
@@ -90,7 +98,7 @@
   {{/* Standings */}}
   <section class="w-100 pv4">
     <div class="ph3 ph5-l center mw8">
-      <h2 class="f3 fw6 dark-blue mb3">{{ if hugo.Data.playoffs }}📊 Final Standings{{ else }}🏆 Standings{{ end }}</h2>
+      <h2 class="f3 fw6 dark-blue mb3">{{ if $playoffMode }}📊 Final Standings{{ else }}🏆 Standings{{ end }}</h2>
       {{ partial "standings.html" . }}
     </div>
   </section>
