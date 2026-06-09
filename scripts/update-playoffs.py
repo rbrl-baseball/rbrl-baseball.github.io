@@ -100,6 +100,23 @@ def update_game(game, event, team_map):
     """Update a single bracket game from a GC event. Returns True if changed."""
     changed = False
 
+    # Sync date and time from GC schedule.
+    start_ts = event.get("start_ts", "")
+    if start_ts:
+        from datetime import datetime, timezone
+        from zoneinfo import ZoneInfo
+
+        dt = datetime.fromisoformat(start_ts.replace("Z", "+00:00"))
+        et = dt.astimezone(ZoneInfo("America/New_York"))
+        gc_date = et.strftime("%Y-%m-%d")
+        gc_time = et.strftime("%-I:%M %p")
+        if game.get("date") != gc_date:
+            game["date"] = gc_date
+            changed = True
+        if game.get("time") != gc_time:
+            game["time"] = gc_time
+            changed = True
+
     if event.get("game_status") == "completed" and game.get("status") != "final":
         home = event.get("home_team", {})
         away = event.get("away_team", {})
