@@ -18,7 +18,7 @@ american_league:
     label: AL Semifinal
     date: '2026-06-09'
     time: 5:45 PM
-    status: scheduled
+    status: final
     gc_event_id: bf2c776e-095c-47c3-a889-4aaedbbdc0c4
     home:
       seed: 2
@@ -26,6 +26,9 @@ american_league:
     away:
       seed: 3
       name: Angels
+    home_score: 8
+    away_score: 5
+    winner: Mariners
   semifinal_lower:
     label: AL Semifinal
     date: '2026-06-10'
@@ -47,7 +50,8 @@ american_league:
     home:
       name: TBD
     away:
-      name: TBD
+      name: Mariners
+      seed: 2
 national_league:
   play_in:
     label: Play-In Game
@@ -68,7 +72,7 @@ national_league:
     label: NL Semifinal
     date: '2026-06-09'
     time: 5:45 PM
-    status: scheduled
+    status: final
     gc_event_id: bbfb6b1a-e316-4cd1-a29f-664382523f89
     home:
       seed: 2
@@ -76,6 +80,9 @@ national_league:
     away:
       seed: 3
       name: Pirates
+    home_score: 7
+    away_score: 11
+    winner: Pirates
   semifinal_lower:
     label: NL Semifinal
     date: '2026-06-10'
@@ -97,7 +104,8 @@ national_league:
     home:
       name: TBD
     away:
-      name: TBD
+      name: Pirates
+      seed: 3
 world_series:
   format: Best of 3
   al_champion: TBD
