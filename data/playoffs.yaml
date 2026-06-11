@@ -33,7 +33,7 @@ american_league:
     label: AL Semifinal
     date: '2026-06-10'
     time: 5:45 PM
-    status: scheduled
+    status: final
     gc_event_id: f7b8cb53-2f2a-4dc6-9961-3d22c669780c
     home:
       seed: 1
@@ -41,6 +41,9 @@ american_league:
     away:
       name: Athletics
       seed: 5
+    home_score: 14
+    away_score: 6
+    winner: Royals
   championship:
     label: AL Championship
     date: '2026-06-12'
@@ -48,7 +51,8 @@ american_league:
     status: scheduled
     gc_event_id: 4aa74e10-880c-480f-ba6d-6f675139965a
     home:
-      name: TBD
+      name: Royals
+      seed: 1
     away:
       name: Mariners
       seed: 2
@@ -87,7 +91,7 @@ national_league:
     label: NL Semifinal
     date: '2026-06-10'
     time: 5:45 PM
-    status: scheduled
+    status: final
     gc_event_id: 4a87f785-b8d9-4bf1-b411-840262597d8e
     home:
       seed: 1
@@ -95,6 +99,9 @@ national_league:
     away:
       name: Padres
       seed: 4
+    home_score: 4
+    away_score: 6
+    winner: Padres
   championship:
     label: NL Championship
     date: '2026-06-12'
@@ -102,7 +109,8 @@ national_league:
     status: scheduled
     gc_event_id: b8e273b2-5259-403a-9896-10b938be1634
     home:
-      name: TBD
+      name: Padres
+      seed: 4
     away:
       name: Pirates
       seed: 3
