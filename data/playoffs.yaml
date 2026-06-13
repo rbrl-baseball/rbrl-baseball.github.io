@@ -48,14 +48,17 @@ american_league:
     label: AL Championship
     date: '2026-06-12'
     time: 5:45 PM
-    status: scheduled
-    gc_event_id: 4aa74e10-880c-480f-ba6d-6f675139965a
+    status: final
+    gc_event_id: b8e273b2-5259-403a-9896-10b938be1634
     home:
       name: Royals
       seed: 1
     away:
       name: Mariners
       seed: 2
+    home_score: 11
+    away_score: 1
+    winner: Royals
 national_league:
   play_in:
     label: Play-In Game
@@ -106,29 +109,44 @@ national_league:
     label: NL Championship
     date: '2026-06-12'
     time: 5:45 PM
-    status: scheduled
-    gc_event_id: b8e273b2-5259-403a-9896-10b938be1634
+    status: final
+    gc_event_id: 4aa74e10-880c-480f-ba6d-6f675139965a
     home:
-      name: Padres
-      seed: 4
-    away:
       name: Pirates
       seed: 3
+    away:
+      name: Padres
+      seed: 4
+    home_score: 5
+    away_score: 8
+    winner: Padres
 world_series:
   format: Best of 3
-  al_champion: TBD
-  nl_champion: TBD
+  al_champion: Royals
+  nl_champion: Padres
   games:
   - date: '2026-06-15'
     time: 5:45 PM
     status: scheduled
     gc_event_id: f9afb585-816d-4dd6-b21f-ced4ee6110ed
+    home:
+      name: Royals
+    away:
+      name: Padres
   - date: '2026-06-16'
     time: 5:45 PM
     status: scheduled
     gc_event_id: 3feb6af9-aa05-4ba4-bf06-ba2f49b571c8
+    home:
+      name: Padres
+    away:
+      name: Royals
   - date: '2026-06-18'
     time: 5:45 PM
     status: scheduled
     gc_event_id: 77d13a76-ea9e-4395-a519-5cc93094f945
     if_necessary: true
+    home:
+      name: Royals
+    away:
+      name: Padres
