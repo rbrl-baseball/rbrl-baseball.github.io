@@ -127,12 +127,15 @@ world_series:
   games:
   - date: '2026-06-15'
     time: 5:45 PM
-    status: scheduled
+    status: final
     gc_event_id: f9afb585-816d-4dd6-b21f-ced4ee6110ed
     home:
       name: Royals
     away:
       name: Padres
+    home_score: 9
+    away_score: 3
+    winner: Royals
   - date: '2026-06-16'
     time: 5:45 PM
     status: scheduled
