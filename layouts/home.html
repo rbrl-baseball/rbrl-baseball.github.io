@@ -3,9 +3,15 @@
 {{ define "main" }}
   {{/* Playoff mode activates automatically after regular_season_end */}}
   {{ $playoffMode := false }}
+  {{ $seasonComplete := false }}
   {{ with hugo.Data.season.regular_season_end }}
     {{ if and hugo.Data.playoffs (gt (now.Format "2006-01-02") .) }}
       {{ $playoffMode = true }}
+    {{ end }}
+  {{ end }}
+  {{ with hugo.Data.playoffs.world_series.winner }}
+    {{ if ne . "TBD" }}
+      {{ $seasonComplete = true }}
     {{ end }}
   {{ end }}
 
@@ -40,6 +46,7 @@
   {{ end }}
 
   {{/* GameChanger Scoreboard — upcoming only */}}
+  {{ if not $seasonComplete }}
   <section class="w-100 pv4">
     <div class="ph3 ph5-l center mw8">
       <h2 class="f3 fw6 dark-blue mb3">📅 Upcoming Games</h2>
@@ -86,6 +93,7 @@
       <a href="/schedule/" class="f5 link dim dark-blue mt3 dib">View full schedule →</a>
     </div>
   </section>
+  {{ end }}
 
   {{/* Playoff Bracket (shown after regular season ends) */}}
   {{ if $playoffMode }}
