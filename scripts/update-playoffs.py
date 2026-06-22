@@ -2,6 +2,7 @@
 """Fetch playoff game results from GameChanger and update the bracket."""
 
 import json
+import re
 import urllib.request
 import yaml
 from datetime import datetime
@@ -172,6 +173,90 @@ def event_scores_by_team(event, team_map):
         if name and score is not None:
             scores[name] = score
     return scores
+
+
+def wins_to_clinch(series_format):
+    """Return wins needed to clinch a best-of-N series."""
+    match = re.search(r"Best of (\d+)", series_format or "", re.IGNORECASE)
+    if not match:
+        return None
+    games = int(match.group(1))
+    return games // 2 + 1
+
+
+def game_winner(game):
+    """Return the winning team from a completed bracket game."""
+    if game.get("winner"):
+        return game["winner"]
+    if game.get("status") != "final":
+        return None
+
+    home_score = game.get("home_score")
+    away_score = game.get("away_score")
+    if home_score is None or away_score is None or home_score == away_score:
+        return None
+    if home_score > away_score:
+        return (game.get("home") or {}).get("name")
+    return (game.get("away") or {}).get("name")
+
+
+def update_world_series_status(bracket):
+    """Record the World Series winner and hide unneeded if-necessary games."""
+    ws = bracket.get("world_series", {})
+    games = ws.get("games", [])
+    needed_wins = wins_to_clinch(ws.get("format"))
+    if not needed_wins:
+        return False
+
+    changed = False
+    wins = {}
+    winner = None
+    loser = None
+
+    for game in games:
+        if winner:
+            if game.get("if_necessary") and game.get("status") != "final":
+                if game.get("status") != "not_needed":
+                    game["status"] = "not_needed"
+                    changed = True
+            continue
+
+        game_winning_team = game_winner(game)
+        if not game_winning_team:
+            continue
+
+        if game.get("winner") != game_winning_team:
+            game["winner"] = game_winning_team
+            changed = True
+
+        wins[game_winning_team] = wins.get(game_winning_team, 0) + 1
+        if wins[game_winning_team] >= needed_wins:
+            winner = game_winning_team
+            teams = game_team_names(game)
+            loser_candidates = [team for team in teams if team != winner]
+            loser = loser_candidates[0] if loser_candidates else None
+
+    if winner:
+        if not loser:
+            teams = {ws.get("al_champion"), ws.get("nl_champion")} - {None, "TBD", winner}
+            loser = next(iter(teams), None)
+        winner_wins = wins.get(winner, needed_wins)
+        loser_wins = wins.get(loser, 0) if loser else 0
+
+        if ws.get("winner") != winner:
+            ws["winner"] = winner
+            changed = True
+        series_score = f"{winner_wins}-{loser_wins}"
+        if ws.get("series_score") != series_score:
+            ws["series_score"] = series_score
+            changed = True
+    else:
+        for key in ("winner", "series_score"):
+            if key in ws:
+                del ws[key]
+                changed = True
+
+    return changed
 
 
 def standings_records(standings):
@@ -547,6 +632,9 @@ def main():
         changed = True
 
     if assign_world_series_home_teams(bracket, standings):
+        changed = True
+
+    if update_world_series_status(bracket):
         changed = True
 
     if changed:

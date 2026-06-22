@@ -852,6 +852,23 @@ body > footer {
 }
 
 /* World Series */
+.ws-champion {
+  background: linear-gradient(135deg, var(--rbrl-blue), var(--rbrl-blue-dark));
+}
+
+.ws-champion-logo {
+  width: 64px;
+  height: 64px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ws-champion-logo img {
+  transform: translate(3px, 9px);
+}
+
 .ws-logo {
   width: 48px;
   height: 48px;

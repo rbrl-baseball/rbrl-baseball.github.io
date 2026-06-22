@@ -187,6 +187,82 @@ class UpdatePlayoffsTest(unittest.TestCase):
         self.assertEqual("Padres", game["away"]["name"])
         self.assertEqual(2, game["away_score"])
 
+    def test_world_series_sweep_sets_winner_and_hides_game_three(self):
+        bracket = copy.deepcopy(BRACKET)
+        bracket["world_series"] = {
+            "format": "Best of 3",
+            "al_champion": "Royals",
+            "nl_champion": "Padres",
+            "games": [
+                {
+                    "status": "final",
+                    "home": {"name": "Royals"},
+                    "away": {"name": "Padres"},
+                    "home_score": 9,
+                    "away_score": 3,
+                },
+                {
+                    "status": "final",
+                    "home": {"name": "Padres"},
+                    "away": {"name": "Royals"},
+                    "home_score": 4,
+                    "away_score": 15,
+                },
+                {
+                    "status": "scheduled",
+                    "if_necessary": True,
+                    "home": {"name": "Royals"},
+                    "away": {"name": "Padres"},
+                },
+            ],
+        }
+
+        changed = update_playoffs.update_world_series_status(bracket)
+
+        ws = bracket["world_series"]
+        self.assertTrue(changed)
+        self.assertEqual("Royals", ws["winner"])
+        self.assertEqual("2-0", ws["series_score"])
+        self.assertEqual("Royals", ws["games"][0]["winner"])
+        self.assertEqual("Royals", ws["games"][1]["winner"])
+        self.assertEqual("not_needed", ws["games"][2]["status"])
+
+    def test_world_series_status_does_not_hide_game_three_before_clinch(self):
+        bracket = copy.deepcopy(BRACKET)
+        bracket["world_series"] = {
+            "format": "Best of 3",
+            "al_champion": "Royals",
+            "nl_champion": "Padres",
+            "games": [
+                {
+                    "status": "final",
+                    "home": {"name": "Royals"},
+                    "away": {"name": "Padres"},
+                    "home_score": 9,
+                    "away_score": 3,
+                    "winner": "Royals",
+                },
+                {
+                    "status": "scheduled",
+                    "home": {"name": "Padres"},
+                    "away": {"name": "Royals"},
+                },
+                {
+                    "status": "scheduled",
+                    "if_necessary": True,
+                    "home": {"name": "Royals"},
+                    "away": {"name": "Padres"},
+                },
+            ],
+        }
+
+        changed = update_playoffs.update_world_series_status(bracket)
+
+        ws = bracket["world_series"]
+        self.assertFalse(changed)
+        self.assertNotIn("winner", ws)
+        self.assertEqual("scheduled", ws["games"][2]["status"])
+
 
 if __name__ == "__main__":
     unittest.main()

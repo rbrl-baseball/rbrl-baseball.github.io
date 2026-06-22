@@ -73,9 +73,20 @@
     <div class="bracket-card br3 overflow-hidden shadow-4 center" style="max-width: 500px;">
       <div class="bracket-header pa3 tc" style="background: linear-gradient(135deg, var(--rbrl-blue), var(--rbrl-red));">
         <h3 class="f4 fw6 ma0 white">⭐ World Series</h3>
-        <p class="f7 white-70 ma0 mt1">{{ $ws.format }}</p>
       </div>
       <div class="pa3">
+        {{ if and (isset $ws "winner") $ws.winner }}
+        {{ $winnerLogo := index $logos $ws.winner }}
+        <div class="ws-champion tc pa3 mb3 br3">
+          {{ if $winnerLogo }}
+          <span class="ws-champion-logo db center mb2">
+            <img src="{{ $winnerLogo }}" alt="{{ $ws.winner }} logo" class="ws-logo db center" loading="lazy">
+          </span>
+          {{ end }}
+          <div class="f6 fw7 ttu tracked white">Champions</div>
+        </div>
+        {{ end }}
+
         <div class="flex items-center justify-center mb3">
           <div class="tc flex-auto">
             {{ $alLogo := index $logos $ws.al_champion }}
@@ -94,6 +105,7 @@
 
         {{/* Individual WS games */}}
         {{ range $i, $g := $ws.games }}
+        {{ if ne $g.status "not_needed" }}
         <div class="ws-game pa2 mb1 br2 {{ if and (isset $g "if_necessary") $g.if_necessary }}ws-if-necessary{{ end }}">
           <div class="flex items-center justify-between">
             <span class="f7 fw6">Game {{ add $i 1 }}{{ if and (isset $g "if_necessary") $g.if_necessary }} <span class="normal i mid-gray">(if necessary)</span>{{ end }}</span>
@@ -101,9 +113,12 @@
             <span class="f7 mid-gray">{{ $d.Format "Mon, Jan 2" }}{{ with $g.time }} · {{ . }}{{ end }}</span>
           </div>
           {{ if eq $g.status "final" }}
-          <div class="f7 fw6 mt1" style="color: var(--rbrl-blue);">Final: {{ $g.home_score }} – {{ $g.away_score }}</div>
+          <div class="f7 fw6 mt1" style="color: var(--rbrl-blue);">
+            Final: {{ $g.away.name }} {{ $g.away_score }}, {{ $g.home.name }} {{ $g.home_score }}
+          </div>
           {{ end }}
         </div>
+        {{ end }}
         {{ end }}
       </div>
     </div>
